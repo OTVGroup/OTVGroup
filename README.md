@@ -1437,7 +1437,7 @@
     </div>
     <script>
       // id button -> class section
-      const map = {
+      const map = { 
         "id-home": "s-home",
         "id-info": "s-info",
         "id-service": "s-service",
