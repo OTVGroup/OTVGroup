@@ -918,8 +918,8 @@
                 <span>E-mail</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="mailto:otvgroupsuport@gmail.com" target="_blank">
-                    <span>otvgroupsuport@gmail.com</span>
+                  <a href="mailto:otvgroupcontact@gmail.com" target="_blank">
+                    <span>otvgroupcontact@gmail.com</span>
                   </a>
                 </div>
               </div>
@@ -1306,11 +1306,11 @@
                   <i class="fas fa-map-marker-alt"></i>Ho Chi Minh, Viet Nam
                 </a>
                 <a
-                  href="mailto:otvgroupsuport@gmail.com"
+                  href="mailto:otvgroupcontact@gmail.com"
                   target="_blank"
                   style="width: fit-content; font-size: 16px"
                 >
-                  <i class="fas fa-envelope"></i>otvgroupsuport@gmail.com
+                  <i class="fas fa-envelope"></i>otvgroupcontact@gmail.com
                 </a>
                 <a
                   href="tel:+84329022431"
@@ -1406,8 +1406,8 @@
             <a href="https://maps.app.goo.gl/6Eh4xp7Ainpmf6FZ9" target="_blank">
               <i class="fas fa-map-marker-alt"></i>Ho Chi Minh, Viet Nam
             </a>
-            <a href="mailto:otvgroupsuport@gmail.com" target="_blank">
-              <i class="fas fa-envelope"></i>otvgroupsuport@gmail.com
+            <a href="mailto:otvgroupcontact@gmail.com" target="_blank">
+              <i class="fas fa-envelope"></i>otvgroupcontact@gmail.com
             </a>
             <a href="tel:+84329022431" target="_blank">
               <i class="fa fa-phone"></i>+84 329 022 431
@@ -1437,7 +1437,7 @@
     </div>
     <script>
       // id button -> class section
-      const map = { 
+      const map = {
         "id-home": "s-home",
         "id-info": "s-info",
         "id-service": "s-service",
