@@ -465,6 +465,7 @@
         height: auto;
         min-width: 300px;
         margin: 0 auto;
+        padding: 10px 0;
         display: flex;
         flex-direction: column;
         background: #2a2a2a;
@@ -473,6 +474,96 @@
         justify-content: center;
         justify-items: center;
         position: relative;
+      }
+
+      /* Wrapper từng dòng */
+      .service .service-wrapper {
+        width: 100%;
+        padding: 0 15px;
+        overflow: hidden;
+      }
+
+      /* Track chạy ngang */
+      .service .service-track {
+        display: flex;
+        width: max-content;
+        gap: 15px;
+        will-change: transform;
+      }
+
+      /* Item */
+      .service .service-item {
+        padding: 5px 10px;
+        background: #8181812f;
+        border-radius: 25px;
+        white-space: nowrap;
+        font-size: 15px;
+        color: #c1c1c1;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .service .service-item::before {
+        content: "\f067"; /* FA plus icon */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900; /* solid */
+        margin-right: 5px;
+      }
+
+      /* Khoảng cách giữa các dòng */
+      .service .mt-30 {
+        margin-top: 15px;
+      }
+
+      /* Phải → Trái */
+      .service .scroll-rtl {
+        animation: scrollRTL 200s linear infinite;
+      }
+
+      /* Trái → Phải */
+      .service .scroll-ltr {
+        animation: scrollLTR 200s linear infinite;
+      }
+
+      /* Keyframes */
+      @keyframes scrollRTL {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      @keyframes scrollLTR {
+        from {
+          transform: translateX(-50%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+
+      /* Pause khi hover (UX tốt) */
+      .service-track:hover {
+        animation-play-state: paused;
+      }
+
+      .service .service-item:hover,
+      .service .service-item:active {
+        color: #ffffff;
+        background: #afafaf2f;
+        scale: 1.05;
+        transition: all 1s ease;
+      }
+
+      @media (max-width: 660px) {
+        .service .service-track {
+          gap: 10px;
+        }
+
+        .service .mt-30 {
+          margin-top: 10px;
+        }
       }
 
       .address {
@@ -1275,12 +1366,142 @@
         });
       </script>
 
+      <!-- SERVICE -->
+      <div class="service s-home s-service view active">
+        <div class="service-wrapper">
+          <div class="service-track scroll-rtl"></div>
+        </div>
+        <div class="service-wrapper mt-30">
+          <div class="service-track scroll-ltr"></div>
+        </div>
+        <div class="service-wrapper mt-30">
+          <div class="service-track scroll-rtl"></div>
+        </div>
+      </div>
+      <script>
+        // 3 dòng dữ liệu
+        const servicesData = [
+          [
+            "Nghiên Cứu Thị Trường",
+            "Hoạch Định Chiến Lược",
+            "Xây Dựng Thương Hiệu",
+            "Sản Xuất Nội Dung",
+            "Tiếp Thị Liên Kết",
+            "Mua Sắm Trực Tuyến",
+            "Dịch Vụ Trung Gian",
+            "Tư Liệu Nghiên Cứu",
+            "Báo Cáo & Phân Tích",
+            "Thiết Kế & Phát Triển",
+            "Cải Tiến & Ứng Dụng",
+            "Sáng Tác",
+            "Streams",
+            "Preview",
+            "Nghiên Cứu Thị Trường",
+            "Hoạch Định Chiến Lược",
+            "Xây Dựng Thương Hiệu",
+            "Sản Xuất Nội Dung",
+            "Tiếp Thị Liên Kết",
+            "Mua Sắm Trực Tuyến",
+            "Dịch Vụ Trung Gian",
+            "Tư Liệu Nghiên Cứu",
+            "Báo Cáo & Phân Tích",
+            "Thiết Kế & Phát Triển",
+            "Cải Tiến & Ứng Dụng",
+            "Sáng Tác",
+            "Streams",
+            "Preview",
+          ], // dòng 1
+          [
+            "Preview",
+            "Streams",
+            "Sáng Tác",
+            "Cải Tiến & Ứng Dụng",
+            "Thiết Kế & Phát Triển",
+            "Báo Cáo & Phân Tích",
+            "Tư Liệu Nghiên Cứu",
+            "Dịch Vụ Trung Gian",
+            "Mua Sắm Trực Tuyến",
+            "Tiếp Thị Liên Kết",
+            "Sản Xuất Nội Dung",
+            "Xây Dựng Thương Hiệu",
+            "Hoạch Định Chiến Lược",
+            "Nghiên Cứu Thị Trường",
+            "Preview",
+            "Streams",
+            "Sáng Tác",
+            "Cải Tiến & Ứng Dụng",
+            "Thiết Kế & Phát Triển",
+            "Báo Cáo & Phân Tích",
+            "Tư Liệu Nghiên Cứu",
+            "Dịch Vụ Trung Gian",
+            "Mua Sắm Trực Tuyến",
+            "Tiếp Thị Liên Kết",
+            "Sản Xuất Nội Dung",
+            "Xây Dựng Thương Hiệu",
+            "Hoạch Định Chiến Lược",
+            "Nghiên Cứu Thị Trường",
+          ], // dòng 2
+          [
+            "Nghiên Cứu Thị Trường",
+            "Hoạch Định Chiến Lược",
+            "Xây Dựng Thương Hiệu",
+            "Sản Xuất Nội Dung",
+            "Tiếp Thị Liên Kết",
+            "Mua Sắm Trực Tuyến",
+            "Dịch Vụ Trung Gian",
+            "Tư Liệu Nghiên Cứu",
+            "Báo Cáo & Phân Tích",
+            "Thiết Kế & Phát Triển",
+            "Cải Tiến & Ứng Dụng",
+            "Sáng Tác",
+            "Streams",
+            "Preview",
+            "Nghiên Cứu Thị Trường",
+            "Hoạch Định Chiến Lược",
+            "Xây Dựng Thương Hiệu",
+            "Sản Xuất Nội Dung",
+            "Tiếp Thị Liên Kết",
+            "Mua Sắm Trực Tuyến",
+            "Dịch Vụ Trung Gian",
+            "Tư Liệu Nghiên Cứu",
+            "Báo Cáo & Phân Tích",
+            "Thiết Kế & Phát Triển",
+            "Cải Tiến & Ứng Dụng",
+            "Sáng Tác",
+            "Streams",
+            "Preview",
+          ], // dòng 3
+        ];
+
+        // Lấy tất cả track
+        const tracks = document.querySelectorAll(".service-track");
+
+        tracks.forEach((track, index) => {
+          const items = servicesData[index]; // lấy dữ liệu theo dòng
+
+          // Tạo item 1 lần
+          items.forEach((text) => {
+            const div = document.createElement("div");
+            div.className = "service-item";
+            div.textContent = text;
+            track.appendChild(div);
+          });
+
+          // Duplicate để chạy vô hạn
+          items.forEach((text) => {
+            const div = document.createElement("div");
+            div.className = "service-item";
+            div.textContent = text;
+            track.appendChild(div);
+          });
+        });
+      </script>
+
       <!-- ADDRESS -->
       <div class="address s-contact view">
         <div class="c-left">
           <div
             class="c-form"
-            onclick="window.open('#')"
             style="
               width: calc(90% + 10px);
               background: #272727;
@@ -1304,6 +1525,7 @@
                 alt="Logo"
                 style="
                   width: 30%;
+                  border-radius: 50%;
                   min-width: 90px;
                   max-width: 120px;
                   aspect-ratio: 1;
