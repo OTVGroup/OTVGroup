@@ -5,18 +5,41 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <meta name="description" content="Hết Mình Với Đam Mê!" />
-    <meta name="author" content="OTVGroup" />
+
+    <!-- Basic -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>OTVGroup | Hết Mình Với Đam Mê!</title>
+
     <meta
-      name="image"
+      name="description"
+      content="OTVGroup là một hệ sinh thái nội dung số sáng tạo, hoạt động trong các lĩnh vực giải trí, nghệ thuật và công nghệ số. Chúng tôi tập trung phát triển nội dung số, dự án truyền thông sáng tạo và các trải nghiệm kỹ thuật số nhằm kết nối cộng đồng và lan tỏa đam mê."
+    />
+
+    <meta name="author" content="OTVGroup" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="OTVGroup | Hết Mình Với Đam Mê!" />
+    <meta
+      property="og:description"
+      content="OTVGroup là một hệ sinh thái nội dung số sáng tạo, hoạt động trong các lĩnh vực giải trí, nghệ thuật và công nghệ số. Chúng tôi tập trung phát triển nội dung số, dự án truyền thông sáng tạo và các trải nghiệm kỹ thuật số nhằm kết nối cộng đồng và lan tỏa đam mê."
+    />
+    <meta
+      property="og:image"
       content="https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/LOGO%20-%20OTVGroup.png"
     />
-    <title>OTVGroup | Hết Mình Với Đam Mê!</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://otvgroup.com.vn" />
+
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/png"
+      sizes="32x32"
       href="https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/LOGO%20-%20OTVGroup.png"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
