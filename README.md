@@ -657,6 +657,7 @@
 
         .address .c-left {
           aspect-ratio: unset;
+          margin-top: 10px;
         }
       }
 
@@ -692,7 +693,7 @@
         flex-direction: column; /* Nếu bạn có nhiều post, vẫn xếp theo dòng */
       }
 
-      .footer .f-header {
+      .footer span {
         width: 100%;
         height: 30px;
         min-width: 300px;
@@ -726,7 +727,7 @@
         flex-direction: column; /* Nếu bạn có nhiều post, vẫn xếp theo dòng */
       }
 
-      .f-content a {
+      .footer .f-content a {
         color: rgb(195, 195, 195);
         width: 100%;
         display: flex;
@@ -735,7 +736,7 @@
         text-decoration: none;
       }
 
-      .f-content a i {
+      .footer .f-content a i {
         margin-right: 3px;
         width: 20px;
         display: flex;
@@ -744,8 +745,8 @@
         justify-items: center;
       }
 
-      .f-content a:hover,
-      .f-content a:active {
+      .footer .f-content a:hover,
+      .footer .f-content a:active {
         color: #ededed;
       }
 
@@ -1646,7 +1647,7 @@
       <!-- FOOTER -->
       <div class="footer">
         <div class="f-left">
-          <a class="f-header">OTVGroup</a>
+          <span class="f-header">OTVGroup</span>
           <div class="f-content">
             <a href="https://maps.app.goo.gl/6Eh4xp7Ainpmf6FZ9" target="_blank">
               <i class="fas fa-map-marker-alt"></i>Ho Chi Minh, Viet Nam
@@ -1660,7 +1661,7 @@
           </div>
         </div>
         <div class="f-center">
-          <a class="f-header">MENU</a>
+          <span class="f-header">MENU</span>
           <div class="f-content">
             <a href=""><i class="fa fa-home"></i>Trang Chủ</a>
             <a href=""><i class="fa-solid fa-address-card"></i>Giới Thiệu</a>
@@ -1668,7 +1669,7 @@
           </div>
         </div>
         <div class="f-right">
-          <a class="f-header">LIÊN KẾT</a>
+          <span class="f-header">LIÊN KẾT</span>
           <div class="f-content">
             <a href=""><i class="fab fa-facebook-f"></i>Facebook</a>
             <a href=""><i class="fab fa-youtube"></i>YouTube</a>
