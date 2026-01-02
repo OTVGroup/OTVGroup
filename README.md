@@ -942,22 +942,37 @@
                 <span>Facebook</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="https://www.facebook.com/OtisVo586/" target="_blank">
                     <span>Otis Võ</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a
+                    href="https://www.facebook.com/OTV.OTISShop"
+                    target="_blank"
+                  >
                     <span>OTISShop</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a
+                    href="https://www.facebook.com/OTV.OTISStore"
+                    target="_blank"
+                  >
                     <span>OTISStore</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a
+                    href="https://www.facebook.com/OTV.OTISStudy"
+                    target="_blank"
+                  >
                     <span>OTISStudy</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a
+                    href="https://otvgroup.github.io/OTVGroup/#"
+                    target="_blank"
+                  >
                     <span>OTISFilms</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a
+                    href="https://otvgroup.github.io/OTVGroup/#"
+                    target="_blank"
+                  >
                     <span>OTISStudio</span>
                   </a>
                 </div>
@@ -1570,7 +1585,7 @@
           </div>
           <div
             class="c-form"
-            onclick="window.open('#')"
+            onclick="window.open('https://forms.gle/CKkvurmG9S1dsoZ49')"
             onmouseout=" this.style.transform='scale(1)';"
             onmouseover="this.style.transform='scale(1.02)';"
             style="
@@ -1591,7 +1606,7 @@
           </div>
           <div
             class="c-form"
-            onclick="window.open('#')"
+            onclick="window.open('https://forms.gle/zggvb3Rps66UDgt16')"
             onmouseout=" this.style.transform='scale(1)';"
             onmouseover="this.style.transform='scale(1.02)';"
             style="
@@ -1612,7 +1627,7 @@
           </div>
           <div
             class="c-form"
-            onclick="window.open('#')"
+            onclick="window.open('https://forms.gle/DUY8uiVCPKMmPpf5A')"
             onmouseout=" this.style.transform='scale(1)';"
             onmouseover="this.style.transform='scale(1.02)';"
             style="
