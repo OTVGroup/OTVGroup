@@ -1,24 +1,17 @@
 <html lang="vi">
   <head>
+    <!-- Basic -->
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-
-    <!-- Basic -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>OTVGroup | Hết Mình Với Đam Mê!</title>
-
     <meta
       name="description"
       content="OTVGroup là một hệ sinh thái nội dung số sáng tạo, hoạt động trong các lĩnh vực giải trí, nghệ thuật và công nghệ số. Chúng tôi tập trung phát triển nội dung số, dự án truyền thông sáng tạo và các trải nghiệm kỹ thuật số nhằm kết nối cộng đồng và lan tỏa đam mê."
     />
-
     <meta name="author" content="OTVGroup" />
-
     <!-- Open Graph -->
     <meta property="og:title" content="OTVGroup | Hết Mình Với Đam Mê!" />
     <meta
@@ -27,19 +20,18 @@
     />
     <meta
       property="og:image"
-      content="https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/LOGO%20-%20OTVGroup.png"
+      content="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTVGroup.png"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://otvgroup.com.vn" />
+    <meta property="og:url" content="https://otvgroup.github.io/OTVGroup/" />
 
     <!-- Favicon -->
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/LOGO%20-%20OTVGroup.png"
+      href="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTVGroup.png"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -109,7 +101,9 @@
         min-width: 24px;
         max-width: 60px;
         border-radius: 50%;
-        box-shadow: 0 0 5px rgb(226, 226, 226), 0 0 5px rgb(250, 250, 250);
+        box-shadow:
+          0 0 5px rgb(226, 226, 226),
+          0 0 5px rgb(250, 250, 250);
       }
 
       .top nav.menu {
@@ -144,7 +138,9 @@
       .top nav.menu label.active i,
       .top nav.menu label:hover i {
         color: #0f0;
-        text-shadow: 0 0 10px rgb(0, 217, 43), 0 0 20px rgb(0, 213, 0);
+        text-shadow:
+          0 0 10px rgb(0, 217, 43),
+          0 0 20px rgb(0, 213, 0);
       }
 
       .top nav.menu label span {
@@ -159,7 +155,9 @@
         width: calc(100vw * 0.75 / 4 - 20px);
         height: 5px;
         background: #0f0;
-        transition: left 0.5s ease, box-shadow 0.5s ease;
+        transition:
+          left 0.5s ease,
+          box-shadow 0.5s ease;
         pointer-events: none;
         z-index: 2;
       }
@@ -194,7 +192,9 @@
       .top .tab-menu.active i,
       .top .tab-menu:hover i {
         color: #0f0;
-        text-shadow: 0 0 10px rgb(0, 217, 43), 0 0 20px rgb(0, 213, 0);
+        text-shadow:
+          0 0 10px rgb(0, 217, 43),
+          0 0 20px rgb(0, 213, 0);
       }
 
       .top .tab-content {
@@ -276,7 +276,9 @@
           height: 50px;
         }
         .top .img img {
-          box-shadow: 0 0 2px rgb(226, 226, 226), 0 0 2px rgb(250, 250, 250);
+          box-shadow:
+            0 0 2px rgb(226, 226, 226),
+            0 0 2px rgb(250, 250, 250);
         }
         .top nav.menu label span {
           display: none;
@@ -316,6 +318,23 @@
 
       .bottom .view.active {
         display: flex;
+      }
+
+      .header {
+        width: 100%;
+        height: 30px;
+        margin: 0;
+        line-height: 1;
+        display: flex;
+        padding: 10px 15px;
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+        background-color: rgba(67, 67, 67, 0.708);
+        justify-content: center; /* Căn giữa theo chiều ngang */
+        justify-items: center;
+        position: relative;
+        flex-direction: column; /* Nếu bạn có nhiều post, vẫn xếp theo dòng */
       }
 
       /* VIDEO REVIEW */
@@ -382,20 +401,38 @@
         border: none;
       }
 
-      .post .p_header {
+      .post .p_poster {
+        aspect-ratio: 2.5;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+      }
+
+      .post .p_poster .p_logo {
+        display: flex;
+        position: absolute;
+        background-color: #000000d1;
+        border-radius: 50%;
+        top: 10px;
+        left: 10px;
+        width: clamp(20px, 10%, 60px);
+        aspect-ratio: 1;
+      }
+      .post .p_poster .p_header {
         width: 100%;
         height: 30px;
-        margin: 0;
+        margin: auto;
         line-height: 1;
+        position: absolute;
         display: flex;
-        padding: 0 15px;
-        font-size: var(--font-size);
+        font-size: 28px;
         font-weight: 600;
         color: white;
-        background-color: rgba(67, 67, 67, 0.708);
+        background: none;
         justify-content: center; /* Căn giữa theo chiều ngang */
         justify-items: center;
-        position: relative;
+        align-items: center;
         flex-direction: column; /* Nếu bạn có nhiều post, vẫn xếp theo dòng */
       }
 
@@ -460,7 +497,8 @@
         }
       }
 
-      .service {
+      /* SERVICE-SCROLL */
+      .service-scroll {
         width: 100%;
         height: auto;
         min-width: 300px;
@@ -477,14 +515,14 @@
       }
 
       /* Wrapper từng dòng */
-      .service .service-wrapper {
+      .service-scroll .service-wrapper {
         width: 100%;
         padding: 0 15px;
         overflow: hidden;
       }
 
       /* Track chạy ngang */
-      .service .service-track {
+      .service-scroll .service-track {
         display: flex;
         width: max-content;
         gap: 15px;
@@ -492,7 +530,7 @@
       }
 
       /* Item */
-      .service .service-item {
+      .service-scroll .service-item {
         padding: 5px 10px;
         background: #8181812f;
         border-radius: 25px;
@@ -502,7 +540,7 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       }
 
-      .service .service-item::before {
+      .service-scroll .service-item::before {
         content: "\f067"; /* FA plus icon */
         font-family: "Font Awesome 5 Free";
         font-weight: 900; /* solid */
@@ -510,17 +548,17 @@
       }
 
       /* Khoảng cách giữa các dòng */
-      .service .mt-30 {
+      .service-scroll .mt-30 {
         margin-top: 15px;
       }
 
       /* Phải → Trái */
-      .service .scroll-rtl {
+      .service-scroll .scroll-rtl {
         animation: scrollRTL 200s linear infinite;
       }
 
       /* Trái → Phải */
-      .service .scroll-ltr {
+      .service-scroll .scroll-ltr {
         animation: scrollLTR 200s linear infinite;
       }
 
@@ -548,8 +586,8 @@
         animation-play-state: paused;
       }
 
-      .service .service-item:hover,
-      .service .service-item:active {
+      .service-scroll .service-item:hover,
+      .service-scroll .service-item:active {
         color: #ffffff;
         background: #afafaf2f;
         scale: 1.05;
@@ -557,11 +595,11 @@
       }
 
       @media (max-width: 660px) {
-        .service .service-track {
+        .service-scroll .service-track {
           gap: 10px;
         }
 
-        .service .mt-30 {
+        .service-scroll .mt-30 {
           margin-top: 10px;
         }
       }
@@ -784,26 +822,26 @@
     <div class="top">
       <div class="img">
         <img
-          src="https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/LOGO%20-%20OTVGroup.png"
+          src="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTVGroup.png"
           alt="Logo"
         />
       </div>
       <nav class="menu">
         <div class="indicator"></div>
 
-        <label class="active" id="id-home">
+        <label data-target="s-home" id="id-home" class="active">
           <i class="fa fa-home"></i>
           <span>Trang chủ</span>
         </label>
-        <label id="id-info">
+        <label data-target="s-info" id="id-info">
           <i class="fa-solid fa-address-card"></i>
           <span>Giới Thiệu</span>
         </label>
-        <label id="id-service">
+        <label data-target="s-service" id="id-service">
           <i class="fa-solid fa-briefcase"></i>
           <span>Dịch vụ</span>
         </label>
-        <label id="id-contact">
+        <label data-target="s-contact" id="id-contact">
           <i class="fa-solid fa-headset"></i>
           <span>Liên hệ</span>
         </label>
@@ -833,9 +871,6 @@
               </a>
               <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                 <span>OTISFilms</span>
-              </a>
-              <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                <span>OTISStudio</span>
               </a>
             </div>
           </div>
@@ -969,12 +1004,6 @@
                   >
                     <span>OTISFilms</span>
                   </a>
-                  <a
-                    href="https://otvgroup.github.io/OTVGroup/#"
-                    target="_blank"
-                  >
-                    <span>OTISStudio</span>
-                  </a>
                 </div>
               </div>
               <div>
@@ -999,9 +1028,6 @@
                   <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <span>OTISFilms</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                    <span>OTISStudio</span>
-                  </a>
                 </div>
               </div>
               <div>
@@ -1022,9 +1048,6 @@
                   </a>
                   <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <span>OTISFilms</span>
-                  </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                    <span>OTISStudio</span>
                   </a>
                 </div>
               </div>
@@ -1058,75 +1081,6 @@
         </div>
       </div>
     </div>
-    <script>
-      const labels = document.querySelectorAll(".menu label");
-      const indicator = document.querySelector(".indicator");
-      labels.forEach((label, index) => {
-        label.addEventListener("click", () => {
-          document.querySelector(".active").classList.remove("active");
-          label.classList.add("active");
-          indicator.style.left = `calc(${index} * (100vw * 0.75 / 4) + 10px)`;
-        });
-      });
-    </script>
-    <script>
-      const icons = document.querySelectorAll(".tab-menu i");
-      const contents = document.querySelectorAll(".tab-content");
-
-      icons.forEach((icon, index) => {
-        icon.addEventListener("click", () => {
-          // Nếu tab này đang mở thì ẩn đi
-          if (contents[index].classList.contains("active")) {
-            contents[index].classList.remove("active");
-            icon.classList.remove("active");
-            return;
-          }
-
-          // Ẩn hết các tab khác
-          contents.forEach((c) => c.classList.remove("active"));
-          icons.forEach((i) => i.classList.remove("active"));
-
-          // Mở tab được chọn
-          contents[index].classList.add("active");
-          icon.classList.add("active");
-        });
-      });
-    </script>
-    <script>
-      /* ===== CẤP 1: submenu0 → submenu1 ===== */
-      document.querySelectorAll(".submenu0").forEach((level1) => {
-        const submenu1 = level1.querySelector(".submenu1");
-
-        level1.addEventListener("click", (e) => {
-          e.stopPropagation();
-          if (!submenu1) return;
-
-          document.querySelectorAll(".submenu1").forEach((sm) => {
-            if (sm !== submenu1) sm.style.display = "none";
-          });
-
-          submenu1.style.display =
-            submenu1.style.display === "block" ? "none" : "block";
-        });
-      });
-
-      /* ===== CẤP 2: span → submenu2 ===== */
-      document.querySelectorAll(".submenu1 > div").forEach((level2) => {
-        const submenu2 = level2.querySelector(".submenu2");
-
-        level2.querySelector("span")?.addEventListener("click", (e) => {
-          e.stopPropagation();
-          if (!submenu2) return;
-
-          level2.parentElement.querySelectorAll(".submenu2").forEach((sm) => {
-            if (sm !== submenu2) sm.style.display = "none";
-          });
-
-          submenu2.style.display =
-            submenu2.style.display === "block" ? "none" : "block";
-        });
-      });
-    </script>
 
     <!-- Form Bottom -->
     <div class="bottom">
@@ -1163,7 +1117,7 @@
         async function getLatestVideos(channel) {
           try {
             const res = await fetch(
-              `https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=${channel.id}`
+              `https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=${channel.id}`,
             );
             const data = await res.json();
             return data.items
@@ -1178,7 +1132,7 @@
 
         async function buildPlaylist() {
           const allVideoLists = await Promise.all(
-            channels.map((c) => getLatestVideos(c))
+            channels.map((c) => getLatestVideos(c)),
           );
           return [fixedVideo, ...allVideoLists.flat()].filter((v) => v);
         }
@@ -1224,19 +1178,24 @@
         init();
       </script>
 
-      <!-- INTRO -->
-
       <!-- POST -->
       <div class="post s-home s-info view active">
-        <div class="p_header" style="--font-size: 18px">GROUP FACEBOOK</div>
+        <div class="header">GROUP FACEBOOK</div>
         <div class="p_2" style="background: #daf3ffdd">
-          <img
-            src="https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/468426620_122122770164552182_2194104395195010555_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeFpOB3VIGTT4g_qysqdEcSiKYy0lgannDYpjLSWBqecNkO2NVfb_lcSm6Bs-dYOCy5koTp3ax8x-6cq6EOlYKSD&_nc_ohc=S9hlq0vaxdYQ7kNvwES5iYW&_nc_oc=AdmWSFaPrPEZilHH_z4SYod0nonHbRTpNdhJ_br7wXEn8D68jNpJrX0Kdpz4WP5NXyE&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=Rdaf6jsLOVUcZToF_omH6Q&oh=00_Afn6d7VW44ATevy2kkEqt0Lq4d7E0FIucchuWEXcwfkhTw&oe=6957C30B"
-            alt="Facebook Group_1"
-            style="width: 100%; aspect-ratio: 2.5"
-          />
-          <div class="p_header" style="align-items: center; --font-size: 15px">
-            GÓC NHỎ
+          <div class="p_poster">
+            <div class="p_logo">
+              <img
+                src="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTVGroup.png"
+                alt="Logo_OTVGroup"
+                style="width: 100%"
+              />
+            </div>
+            <img
+              src="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/bg-fb-GocNho"
+              alt="Facebook Group_1"
+              style="width: 100%; aspect-ratio: 2.5"
+            />
+            <div class="p_header">GÓC NHỎ</div>
           </div>
           <div class="p_content clamp">
             Góc Nhỏ - nơi mỗi câu chuyện, mỗi chia sẻ
@@ -1257,19 +1216,25 @@
           </div>
         </div>
         <div class="p_1" style="background: #daf3ffdd">
-          <img
-            src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/588843585_122194789730552182_3801606182584356093_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeET72wqB2PkWp5i-Eb2iazOICeMEY6D7rcgJ4wRjoPutwO6LcPdGjZxJL-7FQXHE-txqJ5_ssbteAiGICKqmFvy&_nc_ohc=bwvxe8HnjvkQ7kNvwGfXbqW&_nc_oc=Adns_rMQCbcy3r5ganyXlzQOjkrbKrRH3lW-YVzTqe0GMN9Lvui93F_imMGbreqC5nk&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=ipZ87KIAmDn253sSlTWzMg&oh=00_AflhSREcArHCyFb3WAsvEvpkqRibpAe3mqmQ38pvabm_1g&oe=6957F3EE"
-            alt="Facebook Group_2"
-            style="width: 100%; aspect-ratio: 2.5"
-          />
-          <div class="p_header" style="align-items: center; --font-size: 15px">
-            THƯ VIỆN CẢM XÚC
+          <div class="p_poster">
+            <div class="p_logo">
+              <img
+                src="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTVGroup.png"
+                alt="Logo_OTVGroup"
+                style="width: 100%"
+              />
+            </div>
+            <img
+              src="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/bg-fb-ThuVienCamXuc"
+              alt="Facebook Group_2"
+              style="width: 100%; aspect-ratio: 2.5"
+            />
+            <div class="p_header">THƯ VIỆN CẢM XÚC</div>
           </div>
           <div class="p_content clamp">
             Thư Viện Cảm Xúc - nơi mọi tâm tư, suy nghĩ
             <span class="toggle"> ... Xem thêm </span>
           </div>
-
           <div class="p_bottom">
             <div class="p_infor" style="background: #55ad4d">
               Thành Viên: <i>120</i>
@@ -1285,13 +1250,20 @@
           </div>
         </div>
         <div class="p_1" style="background: #daf3ffdd">
-          <img
-            src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/604517169_122194791110552182_1561466510739720352_n.webp?stp=dst-jpg_tt6&_nc_cat=110&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeECUNinpN2JCsmcfKo5N-uFd2TGhEt5aiF3ZMaES3lqIcoBz3-ti_HX7e3LcZ2MEwrYId0p9kLLuA4gAW2ov36E&_nc_ohc=1b83OYf-hqAQ7kNvwGdtsNU&_nc_oc=AdlcGOssn0D1_bIeJ8DmkjIDSIMWYiFF9oCWzrX6y3nZq-7eqguskc4Jpph5CK8YFzA&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=BdoxFdiz-5WpbxYk60wkNQ&oh=00_AfnhO86UD8Ni0smAWJL4QPtuLej7KB3qSyb-4BpSohyMnw&oe=6957C9DE"
-            alt="Facebook Group_3"
-            style="width: 100%; aspect-ratio: 2.5"
-          />
-          <div class="p_header" style="align-items: center; --font-size: 15px">
-            TÂM THƯ GỬI NGƯỜI
+          <div class="p_poster">
+            <div class="p_logo">
+              <img
+                src="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTVGroup.png"
+                alt="Logo_OTVGroup"
+                style="width: 100%"
+              />
+            </div>
+            <img
+              src="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/bg-fb-TamThuGuiNguoi"
+              alt="Facebook Group_3"
+              style="width: 100%; aspect-ratio: 2.5"
+            />
+            <div class="p_header">TÂM THƯ GỬI NGƯỜI</div>
           </div>
           <div class="p_content clamp">
             Tâm Thư Gửi Người - nơi mọi nỗi niềm, cảm xúc
@@ -1325,7 +1297,7 @@
 
           const content = e.target.closest(".p_content");
           const index = Array.from(
-            document.querySelectorAll(".p_content")
+            document.querySelectorAll(".p_content"),
           ).indexOf(content);
 
           if (!content.dataset.expanded) {
@@ -1345,7 +1317,7 @@
         });
       </script>
       <div class="post s-home s-info view active" id="playlist">
-        <div class="p_header">YOUTUBE SHORTS</div>
+        <div class="header">YOUTUBE SHORTS</div>
         <!-- Các video sẽ tự động tạo div .p_1 và nhúng iframe ở đây -->
       </div>
       <script>
@@ -1376,14 +1348,14 @@
                          src="https://www.youtube.com/embed/videoseries?list=${listId}"
                          allowfullscreen>
                        </iframe>
-                     </div>`
+                     </div>`,
             );
           });
         });
       </script>
 
-      <!-- SERVICE -->
-      <div class="service s-home s-service view active">
+      <!-- SERVICE-SCROLL -->
+      <div class="service-scroll s-home s-service view active">
         <div class="service-wrapper">
           <div class="service-track scroll-rtl"></div>
         </div>
@@ -1514,7 +1486,7 @@
       </script>
 
       <!-- ADDRESS -->
-      <div class="address s-contact view">
+      <div class="address s-home s-contact view active">
         <div class="c-left">
           <div
             class="c-form"
@@ -1537,7 +1509,7 @@
               "
             >
               <img
-                src="https://raw.githubusercontent.com/OTVGroup/OTVGroup.com.vn/main/LOGO%20-%20OTVGroup.png"
+                src="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTVGroup.png"
                 alt="Logo"
                 style="
                   width: 30%;
@@ -1586,8 +1558,8 @@
           <div
             class="c-form"
             onclick="window.open('https://forms.gle/CKkvurmG9S1dsoZ49')"
-            onmouseout=" this.style.transform='scale(1)';"
-            onmouseover="this.style.transform='scale(1.02)';"
+            onmouseout="this.style.transform = 'scale(1)'"
+            onmouseover="this.style.transform = 'scale(1.02)'"
             style="
               width: calc(90% / 2);
               transition: ease 0.5s;
@@ -1607,8 +1579,8 @@
           <div
             class="c-form"
             onclick="window.open('https://forms.gle/zggvb3Rps66UDgt16')"
-            onmouseout=" this.style.transform='scale(1)';"
-            onmouseover="this.style.transform='scale(1.02)';"
+            onmouseout="this.style.transform = 'scale(1)'"
+            onmouseover="this.style.transform = 'scale(1.02)'"
             style="
               width: calc(90% / 2);
               transition: ease 0.5s;
@@ -1628,8 +1600,8 @@
           <div
             class="c-form"
             onclick="window.open('https://forms.gle/DUY8uiVCPKMmPpf5A')"
-            onmouseout=" this.style.transform='scale(1)';"
-            onmouseover="this.style.transform='scale(1.02)';"
+            onmouseout="this.style.transform = 'scale(1)'"
+            onmouseover="this.style.transform = 'scale(1.02)'"
             style="
               width: calc(90% + 10px);
               transition: ease 0.5s;
@@ -1678,17 +1650,29 @@
         <div class="f-center">
           <span class="f-header">MENU</span>
           <div class="f-content">
-            <a href=""><i class="fa fa-home"></i>Trang Chủ</a>
-            <a href=""><i class="fa-solid fa-address-card"></i>Giới Thiệu</a>
-            <a href=""><i class="fa-solid fa-briefcase"></i>Dịch Vụ</a>
+            <a href="#home" data-target="s-home">
+              <i class="fa fa-home"></i>Trang Chủ
+            </a>
+            <a href="#info" data-target="s-info">
+              <i class="fa-solid fa-address-card"></i>Giới Thiệu
+            </a>
+            <a href="#service" data-target="s-service">
+              <i class="fa-solid fa-briefcase"></i>Dịch Vụ
+            </a>
           </div>
         </div>
         <div class="f-right">
           <span class="f-header">LIÊN KẾT</span>
           <div class="f-content">
-            <a href=""><i class="fab fa-facebook-f"></i>Facebook</a>
-            <a href=""><i class="fab fa-youtube"></i>YouTube</a>
-            <a href=""><i class="fab fa-tiktok"></i>Tik Tok</a>
+            <a href="https://www.facebook.com/OtisVo586/">
+              <i class="fab fa-facebook-f"></i>Facebook
+            </a>
+            <a href="https://www.youtube.com/@otvchannelvn">
+              <i class="fab fa-youtube"></i>YouTube
+            </a>
+            <a href="https://www.tiktok.com/@otvgroup">
+              <i class="fab fa-tiktok"></i>Tik Tok
+            </a>
           </div>
         </div>
       </div>
@@ -1696,26 +1680,112 @@
         © <span id="year"></span> OTVGroup. Tất cả các quyền được bảo lưu.
       </div>
     </div>
+
     <script>
-      // id button -> class section
-      const map = {
-        "id-home": "s-home",
-        "id-info": "s-info",
-        "id-service": "s-service",
-        "id-contact": "s-contact",
-      };
+      const icons = document.querySelectorAll(".tab-menu i");
+      const contents = document.querySelectorAll(".tab-content");
 
-      Object.keys(map).forEach((id) => {
-        document.getElementById(id).addEventListener("click", () => {
-          // Ẩn tất cả component
-          document.querySelectorAll(".view").forEach((el) => {
-            el.classList.remove("active");
+      icons.forEach((icon, index) => {
+        icon.addEventListener("click", () => {
+          // Nếu tab này đang mở thì ẩn đi
+          if (contents[index].classList.contains("active")) {
+            contents[index].classList.remove("active");
+            icon.classList.remove("active");
+            return;
+          }
+
+          // Ẩn hết các tab khác
+          contents.forEach((c) => c.classList.remove("active"));
+          icons.forEach((i) => i.classList.remove("active"));
+
+          // Mở tab được chọn
+          contents[index].classList.add("active");
+          icon.classList.add("active");
+        });
+      });
+    </script>
+    <script>
+      /* ===== CẤP 1: submenu0 → submenu1 ===== */
+      document.querySelectorAll(".submenu0").forEach((level1) => {
+        const submenu1 = level1.querySelector(".submenu1");
+
+        level1.addEventListener("click", (e) => {
+          e.stopPropagation();
+          if (!submenu1) return;
+
+          document.querySelectorAll(".submenu1").forEach((sm) => {
+            if (sm !== submenu1) sm.style.display = "none";
           });
 
-          // Hiện tất cả component thuộc state
-          document.querySelectorAll("." + map[id]).forEach((el) => {
-            el.classList.add("active");
+          submenu1.style.display =
+            submenu1.style.display === "block" ? "none" : "block";
+        });
+      });
+
+      /* ===== CẤP 2: span → submenu2 ===== */
+      document.querySelectorAll(".submenu1 > div").forEach((level2) => {
+        const submenu2 = level2.querySelector(".submenu2");
+
+        level2.querySelector("span")?.addEventListener("click", (e) => {
+          e.stopPropagation();
+          if (!submenu2) return;
+
+          level2.parentElement.querySelectorAll(".submenu2").forEach((sm) => {
+            if (sm !== submenu2) sm.style.display = "none";
           });
+
+          submenu2.style.display =
+            submenu2.style.display === "block" ? "none" : "block";
+        });
+      });
+    </script>
+    <script>
+      const labels = document.querySelectorAll(".menu label");
+      const indicator = document.querySelector(".indicator");
+
+      function setActiveLabel(targetClass) {
+        labels.forEach((label, index) => {
+          if (label.dataset.target === targetClass) {
+            // đổi active
+            labels.forEach((l) => l.classList.remove("active"));
+            label.classList.add("active");
+
+            // di chuyển indicator
+            if (indicator) {
+              indicator.style.left = `calc(${index} * (100vw * 0.75 / ${labels.length}) + 10px)`;
+            }
+          }
+        });
+      }
+
+      function showSection(targetClass) {
+        document
+          .querySelectorAll(".view")
+          .forEach((el) => el.classList.remove("active"));
+
+        document
+          .querySelectorAll("." + targetClass)
+          .forEach((el) => el.classList.add("active"));
+
+        setActiveLabel(targetClass); // 🔥 cập nhật label luôn
+      }
+
+      labels.forEach((label) => {
+        label.addEventListener("click", () => {
+          const target = label.dataset.target;
+          if (target) {
+            showSection(target);
+          }
+        });
+      });
+
+      document.querySelectorAll(".f-content a").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = this.dataset.target;
+          if (target) {
+            showSection(target); // 🔥 giờ label cũng đổi
+          }
         });
       });
     </script>
