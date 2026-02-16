@@ -1187,7 +1187,7 @@
               <img
                 src="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTVGroup.png"
                 alt="Logo_OTVGroup"
-                style="width: 100%"
+                style="width: 100%; border-radius: 50%"
               />
             </div>
             <img
@@ -1221,7 +1221,7 @@
               <img
                 src="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTVGroup.png"
                 alt="Logo_OTVGroup"
-                style="width: 100%"
+                style="width: 100%; border-radius: 50%"
               />
             </div>
             <img
@@ -1255,7 +1255,7 @@
               <img
                 src="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTVGroup.png"
                 alt="Logo_OTVGroup"
-                style="width: 100%"
+                style="width: 100%; border-radius: 50%"
               />
             </div>
             <img
