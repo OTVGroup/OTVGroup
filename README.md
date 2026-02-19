@@ -380,6 +380,7 @@
         margin: auto;
         display: flex;
         width: 25vw;
+        border-radius: 50%;
         margin: 0 2.5vw;
         overflow: hidden;
         aspect-ratio: 1;
@@ -422,6 +423,7 @@
 
       .content-features ul {
         padding: 0;
+        margin: 0;
       }
 
       .content-features li {
@@ -439,7 +441,9 @@
       }
 
       .content-features li::before {
-        content: "✔";
+        content: "\f00c "; /* mã unicode fa-check */
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
         position: absolute;
         left: 0;
         color: #e00606;
@@ -453,6 +457,7 @@
         background: #7377fb;
         padding: 10px;
         flex: 1;
+        font-size: 15px;
         justify-content: center;
         border-radius: 10px;
         text-decoration: none;
