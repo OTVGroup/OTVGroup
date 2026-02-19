@@ -413,7 +413,7 @@
       .content-script {
         color: #ffffff;
         line-height: 1.6;
-        margin-bottom: 0;
+        margin: 0;
       }
 
       /* ===== FEATURES ===== */
