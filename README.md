@@ -378,6 +378,7 @@
       /* ===== IMAGE SECTION ===== */
       .about-images {
         margin: auto;
+        display: flex;
         width: 25vw;
         margin: 0 2.5vw;
         overflow: hidden;
