@@ -380,7 +380,6 @@
         margin: auto;
         display: flex;
         width: 25vw;
-        border-radius: 50%;
         margin: 0 2.5vw;
         overflow: hidden;
         aspect-ratio: 1;
@@ -391,6 +390,7 @@
         margin: auto;
         display: block;
         object-fit: cover;
+        border-radius: 50%;
       }
 
       /* ===== CONTENT SECTION ===== */
