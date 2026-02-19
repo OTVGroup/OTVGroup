@@ -362,7 +362,128 @@
         }
       }
 
-      /* BÀI ĐĂNG */
+      /* ===== LAYOUT CHÍNH ===== */
+      .infor-container {
+        background: #0f1419;
+        padding: 20px;
+        width: 100%;
+        height: max-content;
+        min-width: 360px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+      }
+
+      /* ===== IMAGE SECTION ===== */
+      .about-images {
+        margin: auto;
+        display: flex;
+        width: 25vw;
+        margin: 0 2.5vw;
+        overflow: hidden;
+        aspect-ratio: 1;
+      }
+
+      .about-images img {
+        width: 100%;
+        margin: auto;
+        display: block;
+        object-fit: cover;
+      }
+
+      /* ===== CONTENT SECTION ===== */
+      .about-content {
+        display: flex;
+        gap: 10px;
+        flex: 1;
+        flex-direction: column;
+      }
+
+      .content-header {
+        background: #ff4d3f;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        display: inline-block;
+      }
+
+      .content-script {
+        color: #ffffff;
+        line-height: 1.6;
+      }
+
+      /* ===== FEATURES ===== */
+      .content-features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .content-features ul {
+        padding: 0;
+      }
+
+      .content-features li {
+        list-style: none;
+        margin-bottom: 10px;
+        color: #9f9f9f;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .content-features li:hover,
+      .content-features li:active {
+        color: #3c4fcb;
+        font-weight: bold;
+      }
+
+      .content-features li::before {
+        content: "✔";
+        position: absolute;
+        left: 0;
+        color: #e00606;
+      }
+
+      /* ===== ACTIONS ===== */
+      .content-actions {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        background: #7377fb;
+        padding: 10px;
+        flex: 1;
+        justify-content: center;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .content-actions:hover a {
+        color: #000000;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 840px) {
+        .infor-container {
+          flex-direction: column;
+        }
+
+        .about-images,
+        .about-images img {
+          display: none;
+        }
+      }
+
+      @media (max-width: 540px) {
+        .content-features {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* POST */
       .post {
         width: 100%;
         height: auto;
@@ -1177,6 +1298,48 @@
 
         init();
       </script>
+
+      <!-- INFOR IMAGE -->
+      <div class="infor-container s-home s-info view active">
+        <!-- LEFT IMAGES -->
+        <div class="about-images">
+          <div class="about-images">
+            <img
+              src="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTVGroup.png"
+              alt="Logo"
+            />
+          </div>
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="about-content">
+          <span class="content-header">OTVGroup</span>
+          <p class="content-script">
+            OTVGroup là một hệ sinh thái nội dung số sáng tạo, hoạt động trong
+            các lĩnh vực giải trí, nghệ thuật và công nghệ số. Chúng tôi tập
+            trung phát triển nội dung số, các dự án truyền thông sáng tạo và
+            những trải nghiệm kỹ thuật số nhằm kết nối cộng đồng và lan tỏa đam
+            mê.
+          </p>
+
+          <div class="content-features">
+            <ul>
+              <li>Đổi Mới - Sáng Tạo - Công Nghệ</li>
+              <li>Đa Nền Tảng - Đa Thương Hiệu</li>
+              <li>Kết Nối - Phát Triển Cộng Đồng</li>
+            </ul>
+            <ul>
+              <li>Vận Hành Linh Hoạt - Tối Ưu</li>
+              <li>Giải Pháp An Toàn - Hiện Đại</li>
+              <li>Định Hướng Phát Triển Bền Vững</li>
+            </ul>
+          </div>
+
+          <div class="content-actions">
+            <a href="#">Liên hệ ngay</a>
+          </div>
+        </div>
+      </div>
 
       <!-- POST -->
       <div class="post s-home s-info view active">
