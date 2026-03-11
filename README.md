@@ -85,6 +85,7 @@
         padding: 0;
         z-index: 1;
         background: #000000;
+        box-shadow: 0 5px 10px rgb(255, 255, 255);
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
       }
@@ -332,11 +333,7 @@
         font-style: italic; /* chữ nghiêng */
         color: white;
 
-        background: linear-gradient(
-          135deg,
-          #444,
-          #222
-        ); /* nền gradient đẹp hơn */
+        background: #000000;
 
         justify-content: center;
         justify-items: center;
@@ -364,7 +361,7 @@
         margin: 5px auto;
         border-radius: 5px;
         display: flex;
-        background: #2a2a2a;
+        background: #000000;
         align-items: center; /* Căn giữa theo chiều dọc */
         align-content: center;
         justify-content: center; /* Căn giữa theo chiều ngang */
@@ -395,7 +392,7 @@
       }
 
       /* ===== IMAGE SECTION ===== */
-      .about-images {
+      .infor-about .about-images {
         margin: auto;
         display: flex;
         width: 20vw;
@@ -405,11 +402,11 @@
         transition: transform 0.5s ease-in-out;
       }
 
-      .about-images:hover {
+      .infor-about .about-images:hover {
         transform: scale(1.05);
       }
 
-      .about-images img {
+      .infor-about .about-images img {
         width: 100%;
         aspect-ratio: 1;
         margin: auto;
@@ -421,13 +418,13 @@
       }
 
       /* ===== CONTENT SECTION ===== */
-      .about-content {
+      .infor-about .about-content {
         display: flex;
         flex: 1;
         flex-direction: column;
       }
 
-      .content-header {
+      .about-content .content-header {
         background: linear-gradient(135deg, #ff4d3f, #ff6b5b);
         padding: 15px 20px;
         border-radius: 15px;
@@ -439,7 +436,7 @@
         box-shadow: 0 5px 15px rgba(255, 77, 63, 0.4);
       }
 
-      .content-script {
+      .about-content .content-script {
         color: #ffffff;
         line-height: 1.8;
         margin: 0;
@@ -452,13 +449,13 @@
       }
 
       /* ===== FEATURES ===== */
-      .content-features {
+      .about-content .content-features {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
       }
 
-      .content-features ul {
+      .about-content .content-features ul {
         padding: 0;
         margin: 0;
         list-style: none;
@@ -466,37 +463,38 @@
         backdrop-filter: blur(5px);
       }
 
-      .content-features li {
+      .about-content .content-features li {
         margin-bottom: 12px;
         color: #9f9f9f;
         padding-left: 25px;
         position: relative;
-        transition: color 0.5s ease-in-out;
+        transition:
+          color 0.5s ease-in-out,
+          transform 0.5s ease-in-out;
       }
 
-      .content-features li:hover,
-      .content-features li:active {
+      .about-content .content-features li:hover,
+      .about-content .content-features li:active {
         color: #3c4fcb;
         font-weight: bold;
         transform: translateX(5px);
       }
 
-      .content-features li::before {
+      .about-content .content-features li::before {
         content: "\f00c "; /* mã unicode fa-check */
         font-family: "Font Awesome 6 Free";
         font-weight: 900;
         position: absolute;
         left: 0;
         color: #e00606;
-        transition: color 0.5s ease-in-out;
       }
 
-      .content-features li:hover::before {
+      .about-content .content-features li:hover::before {
         color: #3c4fcb;
       }
 
       /* ===== ACTIONS ===== */
-      .content-actions {
+      .about-content .content-actions {
         display: flex;
         width: 100%;
         gap: 10px;
@@ -513,12 +511,14 @@
         box-shadow: 0 5px 15px rgba(115, 119, 251, 0.4);
       }
 
-      .content-actions:hover {
-        transform: translateY(-2px);
+      .about-content .content-actions:hover {
+        text-decoration: none;
+        transform: translateY(-5px);
         box-shadow: 0 10px 15px rgba(115, 119, 251, 0.6);
       }
 
-      .content-actions:hover a {
+      .about-content .content-actions:hover a {
+        text-decoration: none;
         color: #000000;
       }
 
@@ -528,14 +528,14 @@
           flex-direction: column;
         }
 
-        .about-images,
-        .about-images img {
+        .infor-about .about-images,
+        .infor-about .about-images img {
           display: none;
         }
       }
 
       @media (max-width: 540px) {
-        .content-features {
+        .infor-about .content-features {
           grid-template-columns: 1fr;
         }
       }
@@ -558,7 +558,7 @@
         backdrop-filter: blur(15px);
       }
 
-      .brand-avatar {
+      .brand-content .brand-avatar {
         width: 200px;
         max-width: 100%;
         min-height: 150px;
@@ -579,12 +579,12 @@
         transition: 0.5s ease-in-out;
       }
 
-      .brand-avatar img {
+      .brand-content .brand-avatar img {
         width: 100%;
         border-radius: 50%;
       }
 
-      .brand-script {
+      .brand-content .brand-script {
         width: 100%;
         font-size: 22px;
         font-weight: 600;
@@ -637,7 +637,8 @@
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
-        background: #2a2a2a;
+        background: #000000;
+
         align-items: center; /* Căn giữa theo chiều dọc */
         align-content: center;
         justify-content: center; /* Căn giữa theo chiều ngang */
@@ -774,7 +775,10 @@
         padding: 10px 0;
         display: flex;
         flex-direction: column;
-        background: #2a2a2a;
+        background: #000000;
+        box-shadow:
+          inset 0 5px 10px rgb(255, 255, 255),
+          inset 0 -5px 10px rgb(255, 255, 255);
         align-items: center;
         align-content: center;
         justify-content: center;
@@ -800,7 +804,7 @@
       /* Item */
       .service-scroll .service-item {
         padding: 5px 10px;
-        background: #8181812f;
+        background: #81818153;
         border-radius: 25px;
         white-space: nowrap;
         font-size: 15px;
@@ -857,7 +861,7 @@
       .service-scroll .service-item:hover,
       .service-scroll .service-item:active {
         color: #ffffff;
-        background: #afafaf2f;
+        background: #afafaf6f;
         scale: 1.05;
         transition: all 1s ease;
       }
@@ -879,7 +883,8 @@
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
-        background: #2a2a2a;
+        background: #000000;
+        box-shadow: 0 5px 10px rgb(255, 255, 255);
         align-items: center;
         align-content: center;
         justify-content: center;
@@ -1355,90 +1360,45 @@
       <!-- VIDEO -->
       <div class="video-container s-home view active"></div>
       <script>
-        const channels = [
-          { id: "UCv-PFwjDGSfgozwLVCJEv0w", num: 2 },
-          { id: "UC4UOBFi4HJHU_EhynZbrefw", num: 1 },
-        ];
-
-        const fixedVideo = "-lIuqy0Rycw"; // Video cố định
-        let playlist = [];
-        let currentvideo = 0;
+        const fixedVideo = "-lIuqy0Rycw";
         let player;
 
-        // Load YouTube API
+        // load youtube api
         function loadYouTubeAPI() {
           return new Promise((resolve) => {
             if (window.YT && YT.Player) return resolve();
+
             const tag = document.createElement("script");
             tag.src = "https://www.youtube.com/iframe_api";
             document.body.appendChild(tag);
+
             window.onYouTubeIframeAPIReady = () => resolve();
           });
         }
 
-        // Lấy video ID từ guid (chuẩn hơn)
-        function getVideoIdFromItem(item) {
-          // guid: yt:video:VIDEO_ID
-          return item.guid.split(":")[2] || null;
-        }
-
-        async function getLatestVideos(channel) {
-          try {
-            const res = await fetch(
-              `https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=${channel.id}`,
-            );
-            const data = await res.json();
-            return data.items
-              .slice(0, channel.num) // <-- số video riêng cho từng kênh
-              .map((item) => item.guid.split(":")[2])
-              .filter((v) => v);
-          } catch (err) {
-            console.error("Lỗi RSS:", err);
-            return [];
-          }
-        }
-
-        async function buildPlaylist() {
-          const allVideoLists = await Promise.all(
-            channels.map((c) => getLatestVideos(c)),
-          );
-          return [fixedVideo, ...allVideoLists.flat()].filter((v) => v);
-        }
-
         function createPlayer() {
           const container = document.querySelector(".video-container");
-          if (!container || container.dataset.inited) return;
-
-          container.dataset.inited = "true";
 
           player = new YT.Player(container, {
-            videoId: playlist[currentvideo],
+            videoId: fixedVideo,
             playerVars: {
               autoplay: 1,
               mute: 1,
-              controls: 1,
+              controls: 1, // hiện control
+              rel: 1,
               modestbranding: 1,
-              rel: 0,
+              loop: 1,
+              playlist: fixedVideo, // bắt buộc để loop
+              fs: 0, // bỏ fullscreen
+              iv_load_policy: 3, // bỏ annotation
             },
             events: {
               onReady: (e) => e.target.playVideo(),
-              onStateChange: (e) => {
-                if (e.data === YT.PlayerState.ENDED) {
-                  currentvideo = (currentvideo + 1) % playlist.length;
-                  player.loadVideoById(playlist[currentvideo]);
-                }
-              },
-              onError: () => {
-                currentvideo = (currentvideo + 1) % playlist.length;
-                player.loadVideoById(playlist[currentvideo]);
-              },
             },
           });
         }
 
         async function init() {
-          playlist = await buildPlaylist();
-          if (!playlist.length) return console.error("Playlist rỗng");
           await loadYouTubeAPI();
           createPlayer();
         }
@@ -1458,7 +1418,7 @@
 
         <!-- RIGHT CONTENT -->
         <div class="about-content">
-          <span class="content-header">OTVGroup</span>
+          <span class="content-header">OTVGROUP</span>
           <p class="content-script">
             <strong>OTVGroup</strong> là một hệ sinh thái nội dung số sáng tạo,
             hoạt động trong các lĩnh vực giải trí, nghệ thuật và công nghệ số.
@@ -1544,7 +1504,7 @@
       </div>
 
       <!-- POST -->
-      <div class="post s-home s-info view active">
+      <div class="post s-info view">
         <div class="header">GROUP FACEBOOK</div>
         <div class="p_2" style="background: #daf3ffdd">
           <div class="p_poster">
@@ -1681,7 +1641,7 @@
           }
         });
       </script>
-      <div class="post s-home s-info view active" id="playlist">
+      <div class="post s-info view" id="playlist">
         <div class="header">YOUTUBE PLAYLIST</div>
         <!-- Các video sẽ tự động tạo div .p_1 và nhúng iframe ở đây -->
       </div>
