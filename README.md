@@ -322,19 +322,36 @@
 
       .header {
         width: 100%;
-        height: 30px;
+        height: 50px;
         margin: 0;
         line-height: 1;
         display: flex;
         padding: 10px 15px;
-        font-size: 18px;
+        font-size: 30px;
         font-weight: 600;
+        font-style: italic; /* chữ nghiêng */
         color: white;
-        background-color: rgba(67, 67, 67, 0.708);
-        justify-content: center; /* Căn giữa theo chiều ngang */
+
+        background: linear-gradient(
+          135deg,
+          #444,
+          #222
+        ); /* nền gradient đẹp hơn */
+
+        justify-content: center;
         justify-items: center;
         position: relative;
-        flex-direction: column; /* Nếu bạn có nhiều post, vẫn xếp theo dòng */
+        align-items: center;
+        flex-direction: column;
+
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); /* tạo chiều sâu */
+
+        transition: all 0.35s ease;
+      }
+
+      .header:hover,
+      .header:active {
+        color: #909eff;
       }
 
       /* VIDEO REVIEW */
@@ -362,26 +379,34 @@
         }
       }
 
-      /* ===== LAYOUT CHÍNH ===== */
-      .infor-container {
-        background: #0f1419;
-        padding: 20px;
+      /* ===== INFORMATION ABOUT ===== */
+      .infor-about {
         width: 100%;
-        height: max-content;
+        height: auto;
         min-width: 360px;
         display: flex;
         flex-direction: row;
-        gap: 10px;
         align-items: center;
+        backdrop-filter: blur(10px);
+        background: linear-gradient(135deg, #0f1419, #101010);
+        padding: 20px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(15px);
       }
 
       /* ===== IMAGE SECTION ===== */
       .about-images {
         margin: auto;
         display: flex;
-        width: 25vw;
+        width: 20vw;
         margin: 0 2.5vw;
         overflow: hidden;
+        border-radius: 50%;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .about-images:hover {
+        transform: scale(1.05);
       }
 
       .about-images img {
@@ -391,54 +416,69 @@
         display: block;
         object-fit: cover;
         border-radius: 50%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        border: 2.5px solid rgba(255, 255, 255, 0.2);
       }
 
       /* ===== CONTENT SECTION ===== */
       .about-content {
         display: flex;
-        gap: 10px;
         flex: 1;
         flex-direction: column;
       }
 
       .content-header {
-        background: #ff4d3f;
-        padding: 10px;
-        border-radius: 10px;
-        font-size: 18px;
+        background: linear-gradient(135deg, #ff4d3f, #ff6b5b);
+        padding: 15px 20px;
+        border-radius: 15px;
+        font-size: 24px;
         font-weight: bold;
         display: inline-block;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 5px 15px rgba(255, 77, 63, 0.4);
       }
 
       .content-script {
         color: #ffffff;
-        line-height: 1.6;
+        line-height: 1.8;
         margin: 0;
+        text-align: justify;
+        text-justify: inter-word;
+        font-size: 16px;
+        padding: 15px;
+        padding-bottom: 0;
+        backdrop-filter: blur(5px);
       }
 
       /* ===== FEATURES ===== */
       .content-features {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 10px;
       }
 
       .content-features ul {
         padding: 0;
         margin: 0;
+        list-style: none;
+        padding: 10px;
+        backdrop-filter: blur(5px);
       }
 
       .content-features li {
-        list-style: none;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
         color: #9f9f9f;
-        padding-left: 20px;
+        padding-left: 25px;
         position: relative;
+        transition: color 0.5s ease-in-out;
       }
 
       .content-features li:hover,
       .content-features li:active {
         color: #3c4fcb;
         font-weight: bold;
+        transform: translateX(5px);
       }
 
       .content-features li::before {
@@ -448,6 +488,11 @@
         position: absolute;
         left: 0;
         color: #e00606;
+        transition: color 0.5s ease-in-out;
+      }
+
+      .content-features li:hover::before {
+        color: #3c4fcb;
       }
 
       /* ===== ACTIONS ===== */
@@ -455,16 +500,22 @@
         display: flex;
         width: 100%;
         gap: 10px;
-        background: #7377fb;
-        padding: 10px;
+        background: linear-gradient(135deg, #7377fb, #9b59b6);
+        padding: 15px;
         flex: 1;
-        font-size: 15px;
+        font-size: 18px;
         justify-content: center;
-        border-radius: 10px;
+        border-radius: 15px;
         text-decoration: none;
         color: #fff;
         font-weight: 600;
-        transition: 0.3s;
+        transition: 0.5s ease-in-out;
+        box-shadow: 0 5px 15px rgba(115, 119, 251, 0.4);
+      }
+
+      .content-actions:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px rgba(115, 119, 251, 0.6);
       }
 
       .content-actions:hover a {
@@ -485,6 +536,95 @@
 
       @media (max-width: 540px) {
         .content-features {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ===== BRAND CONTENT ===== */
+      .brand-content {
+        width: 100%;
+        gap: 20px;
+        padding: 20px;
+        margin: auto;
+        min-width: 360px;
+
+        display: grid;
+
+        justify-items: center;
+        align-items: center;
+        justify-content: center; /* thêm dòng này */
+
+        background: linear-gradient(135deg, #222121, #120522);
+        backdrop-filter: blur(15px);
+      }
+
+      .brand-avatar {
+        width: 200px;
+        max-width: 100%;
+        min-height: 150px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 10px;
+        padding: 15px;
+
+        color: white;
+        border: 2px solid transparent;
+        border-radius: 10px;
+
+        backdrop-filter: blur(10px);
+        transition: 0.5s ease-in-out;
+      }
+
+      .brand-avatar img {
+        width: 100%;
+        border-radius: 50%;
+      }
+
+      .brand-script {
+        width: 100%;
+        font-size: 22px;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      /* MÀU VIỀN */
+      .brand-1:hover {
+        border: 2px solid #dea300;
+        box-shadow: 0 5px 15px #dea3009f;
+        transform: translateY(-5px) scale(1.05);
+      }
+
+      .brand-2:hover {
+        border: 2px solid #00c2ff;
+        box-shadow: 0 5px 15px #00c2ff9f;
+        transform: translateY(-5px) scale(1.05);
+      }
+
+      .brand-3:hover {
+        border: 2px solid #00e38c;
+        box-shadow: 0 5px 15px #00e38c9f;
+        transform: translateY(-5px) scale(1.05);
+      }
+
+      .brand-4:hover {
+        border: 2px solid #ff5b5b;
+        box-shadow: 0 5px 15px #ff5b5b9f;
+        transform: translateY(-5px) scale(1.05);
+      }
+
+      /* MOBILE */
+      @media (max-width: 900px) {
+        .brand-content {
+          grid-template-columns: repeat(2, 2fr);
+        }
+      }
+
+      @media (max-width: 540px) {
+        .brand-content {
           grid-template-columns: 1fr;
         }
       }
@@ -556,6 +696,7 @@
         font-size: 28px;
         font-weight: 600;
         color: white;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* bóng đen cho chữ */
         background: none;
         justify-content: center; /* Căn giữa theo chiều ngang */
         justify-items: center;
@@ -1305,45 +1446,100 @@
         init();
       </script>
 
-      <!-- INFOR IMAGE -->
-      <div class="infor-container s-home s-info view active">
+      <!-- INFOR ABOUT -->
+      <div class="infor-about s-home s-info view active">
         <!-- LEFT IMAGES -->
         <div class="about-images">
-          <div class="about-images">
-            <img
-              src="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTVGroup.png"
-              alt="Logo"
-            />
-          </div>
+          <img
+            src="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTVGroup.png"
+            alt="Logo"
+          />
         </div>
 
         <!-- RIGHT CONTENT -->
         <div class="about-content">
           <span class="content-header">OTVGroup</span>
           <p class="content-script">
-            OTVGroup là một hệ sinh thái nội dung số sáng tạo, hoạt động trong
-            các lĩnh vực giải trí, nghệ thuật và công nghệ số. Chúng tôi tập
-            trung phát triển nội dung số, các dự án truyền thông sáng tạo và
-            những trải nghiệm kỹ thuật số nhằm kết nối cộng đồng và lan tỏa đam
-            mê.
+            <strong>OTVGroup</strong> là một hệ sinh thái nội dung số sáng tạo,
+            hoạt động trong các lĩnh vực giải trí, nghệ thuật và công nghệ số.
+            Chúng tôi tập trung phát triển nội dung số, các dự án truyền thông
+            sáng tạo và những trải nghiệm kỹ thuật số nhằm kết nối cộng đồng và
+            lan tỏa đam mê.
           </p>
 
           <div class="content-features">
             <ul>
-              <li>Đổi Mới - Sáng Tạo - Công Nghệ</li>
-              <li>Đa Nền Tảng - Đa Thương Hiệu</li>
-              <li>Kết Nối - Phát Triển Cộng Đồng</li>
+              <li>Đổi mới - Sáng tạo - Công nghệ</li>
+              <li>Đa nền tảng - Đa thương hiệu</li>
+              <li>Kết nối - Phát triển cộng đồng</li>
+              <li>Nội dung sáng tạo - Giá trị bền vững</li>
             </ul>
-            <ul>
-              <li>Vận Hành Linh Hoạt - Tối Ưu</li>
-              <li>Giải Pháp An Toàn - Hiện Đại</li>
-              <li>Định Hướng Phát Triển Bền Vững</li>
-            </ul>
-          </div>
 
-          <div class="content-actions">
-            <a href="#">Liên hệ ngay</a>
+            <ul>
+              <li>Vận hành linh hoạt - Tối ưu hệ thống</li>
+              <li>Nội dung số - Trải nghiệm hiện đại</li>
+              <li>Định hướng phát triển bền vững</li>
+              <li>Đa dạng hệ sinh thái số</li>
+            </ul>
           </div>
+          <div class="content-actions">
+            <a href="https://zalo.me/0329022431" target="_blank">
+              Liên Hệ Ngay!
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BRAND CONTENT -->
+      <div class="brand-content s-home s-info view active">
+        <div
+          class="brand-avatar brand-1"
+          onclick="window.open('https://otvgroup.github.io/OTISShop', '_blank')"
+        >
+          <img
+            src="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTISShop.jpg"
+            alt="OTISShop Logo"
+          />
+          <div class="brand-script">OTISSHOP</div>
+        </div>
+
+        <div
+          class="brand-avatar brand-2"
+          onclick="
+            window.open('https://otvgroup.github.io/OTISStore', '_blank')
+          "
+        >
+          <img
+            src="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTISStore.png"
+            alt="OTISStore Logo"
+          />
+          <div class="brand-script">OTISSTORE</div>
+        </div>
+
+        <div
+          class="brand-avatar brand-3"
+          onclick="
+            window.open('https://otvgroup.github.io/OTISStudy', '_blank')
+          "
+        >
+          <img
+            src="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTISStudy.png"
+            alt="OTISStudy Logo"
+          />
+          <div class="brand-script">OTISSTUDY</div>
+        </div>
+
+        <div
+          class="brand-avatar brand-4"
+          onclick="
+            window.open('https://otvgroup.github.io/OTISFilms', '_blank')
+          "
+        >
+          <img
+            src="https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTISFilms.jpg"
+            alt="OTISFilms Logo"
+          />
+          <div class="brand-script">OTISFILMS</div>
         </div>
       </div>
 
@@ -1372,7 +1568,7 @@
           </div>
           <div class="p_bottom">
             <div class="p_infor" style="background: #55ad4d">
-              Thành Viên: <i>144</i>
+              Thành Viên: <i>183</i>
             </div>
             <div class="p_btn" style="background: #1877f2">
               <a
@@ -1406,7 +1602,7 @@
           </div>
           <div class="p_bottom">
             <div class="p_infor" style="background: #55ad4d">
-              Thành Viên: <i>120</i>
+              Thành Viên: <i>154</i>
             </div>
             <div class="p_btn" style="background: #1877f2">
               <a
@@ -1440,7 +1636,7 @@
           </div>
           <div class="p_bottom">
             <div class="p_infor" style="background: #55ad4d">
-              Thành Viên: <i>122</i>
+              Thành Viên: <i>172</i>
             </div>
             <div class="p_btn" style="background: #1877f2">
               <a
@@ -1486,13 +1682,18 @@
         });
       </script>
       <div class="post s-home s-info view active" id="playlist">
-        <div class="header">YOUTUBE SHORTS</div>
+        <div class="header">YOUTUBE PLAYLIST</div>
         <!-- Các video sẽ tự động tạo div .p_1 và nhúng iframe ở đây -->
       </div>
       <script>
         document.addEventListener("DOMContentLoaded", () => {
           const playlists = [
             // Kênh 1
+            "https://www.youtube.com/playlist?list=PLr-nq1_tAgau_iAqQpgnqXh-HaM7gcvO9",
+            "https://www.youtube.com/playlist?list=PLr-nq1_tAgavodoI2FRjpxCb8Yxa_Hu1k",
+            "https://www.youtube.com/playlist?list=PLr-nq1_tAgauoJ6hYN3Vk23wXk1oUlwr6",
+            "https://www.youtube.com/playlist?list=PLr-nq1_tAgataBe8sMPCGvZCIlpPlgq4i",
+            "https://www.youtube.com/playlist?list=PLr-nq1_tAgavw66vBYWUTCwNXbXi_we6u",
             "https://www.youtube.com/playlist?list=PLr-nq1_tAgasf6lDFzZ34LCXk7WIScTmu",
             "https://www.youtube.com/playlist?list=PLr-nq1_tAgatx2oBmmzTCDbT3fknqYlYU",
             "https://www.youtube.com/playlist?list=PLr-nq1_tAgas2QA44VzY93Z6GqXpBt_vv",
