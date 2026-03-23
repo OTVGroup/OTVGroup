@@ -1808,7 +1808,7 @@
               box-shadow: 2px 2px 2px #000000;
             "
           >
-            <span>LIÊN HỆ NGAY</span>
+            <span style="font-weight: bolder">LIÊN HỆ NGAY</span>
             <div
               style="
                 width: 100%;
