@@ -85,7 +85,7 @@
         padding: 0;
         z-index: 1;
         background: #000000;
-        box-shadow: 0 5px 10px rgb(255, 255, 255);
+        box-shadow: 0 5px 10px rgb(255, 255, 255, 0.322);
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
       }
@@ -444,7 +444,6 @@
         text-justify: inter-word;
         font-size: 16px;
         padding: 15px;
-        padding-bottom: 0;
         backdrop-filter: blur(5px);
       }
 
@@ -452,14 +451,14 @@
       .about-content .content-features {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        padding-bottom: 5px;
       }
 
       .about-content .content-features ul {
         padding: 0;
         margin: 0;
         list-style: none;
-        padding: 10px;
+        padding: 0 10px;
         backdrop-filter: blur(5px);
       }
 
@@ -543,24 +542,20 @@
       /* ===== BRAND CONTENT ===== */
       .brand-content {
         width: 100%;
-        gap: 20px;
         padding: 20px;
         margin: auto;
-        min-width: 360px;
 
-        display: grid;
-
-        justify-items: center;
-        align-items: center;
-        justify-content: center; /* thêm dòng này */
+        display: flex;
+        flex-wrap: wrap; /* ✅ cho phép xuống dòng */
+        justify-content: center; /* căn giữa */
+        gap: 20px;
 
         background: linear-gradient(135deg, #222121, #120522);
-        backdrop-filter: blur(15px);
       }
 
       .brand-content .brand-avatar {
-        width: 200px;
-        max-width: 100%;
+        flex: 1 1 180px;
+        max-width: 200px;
         min-height: 150px;
         margin: auto;
         display: flex;
@@ -575,7 +570,6 @@
         border: 2px solid transparent;
         border-radius: 10px;
 
-        backdrop-filter: blur(10px);
         transition: 0.5s ease-in-out;
       }
 
@@ -593,40 +587,27 @@
 
       /* MÀU VIỀN */
       .brand-1:hover {
-        border: 2px solid #dea300;
-        box-shadow: 0 5px 15px #dea3009f;
-        transform: translateY(-5px) scale(1.05);
-      }
-
-      .brand-2:hover {
-        border: 2px solid #00c2ff;
-        box-shadow: 0 5px 15px #00c2ff9f;
-        transform: translateY(-5px) scale(1.05);
-      }
-
-      .brand-3:hover {
         border: 2px solid #00e38c;
         box-shadow: 0 5px 15px #00e38c9f;
         transform: translateY(-5px) scale(1.05);
       }
 
-      .brand-4:hover {
+      .brand-2:hover {
         border: 2px solid #ff5b5b;
         box-shadow: 0 5px 15px #ff5b5b9f;
         transform: translateY(-5px) scale(1.05);
       }
 
-      /* MOBILE */
-      @media (max-width: 900px) {
-        .brand-content {
-          grid-template-columns: repeat(2, 2fr);
-        }
+      .brand-3:hover {
+        border: 2px solid #00c2ff;
+        box-shadow: 0 5px 15px #00c2ff9f;
+        transform: translateY(-5px) scale(1.05);
       }
 
-      @media (max-width: 540px) {
-        .brand-content {
-          grid-template-columns: 1fr;
-        }
+      .brand-4:hover {
+        border: 2px solid #dea300;
+        box-shadow: 0 5px 15px #dea3009f;
+        transform: translateY(-5px) scale(1.05);
       }
 
       /* POST */
@@ -777,8 +758,8 @@
         flex-direction: column;
         background: #000000;
         box-shadow:
-          inset 0 5px 10px rgb(255, 255, 255),
-          inset 0 -5px 10px rgb(255, 255, 255);
+          inset 0 5px 10px rgba(255, 255, 255, 0.322),
+          inset 0 -5px 10px rgba(255, 255, 255, 0.322);
         align-items: center;
         align-content: center;
         justify-content: center;
@@ -1384,9 +1365,9 @@
             playerVars: {
               autoplay: 1,
               mute: 1,
-              controls: 1, // hiện control
+              controls: 0, // hiện control
               rel: 1,
-              modestbranding: 1,
+              modestbranding: 0,
               loop: 1,
               playlist: fixedVideo, // bắt buộc để loop
               fs: 0, // bỏ fullscreen
@@ -1504,7 +1485,7 @@
       </div>
 
       <!-- POST -->
-      <div class="post s-info view">
+      <div class="post s-info view" id="group">
         <div class="header">GROUP FACEBOOK</div>
         <div class="p_2" style="background: #daf3ffdd">
           <div class="p_poster">
@@ -1649,6 +1630,7 @@
         document.addEventListener("DOMContentLoaded", () => {
           const playlists = [
             // Kênh 1
+            "https://www.youtube.com/playlist?list=PLr-nq1_tAgavYM7vyXG_AT_JzMlduZCbr",
             "https://www.youtube.com/playlist?list=PLr-nq1_tAgau_iAqQpgnqXh-HaM7gcvO9",
             "https://www.youtube.com/playlist?list=PLr-nq1_tAgavodoI2FRjpxCb8Yxa_Hu1k",
             "https://www.youtube.com/playlist?list=PLr-nq1_tAgauoJ6hYN3Vk23wXk1oUlwr6",
