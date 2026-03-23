@@ -758,8 +758,8 @@
         flex-direction: column;
         background: #000000;
         box-shadow:
-          inset 0 5px 10px rgba(255, 255, 255, 0.322),
-          inset 0 -5px 10px rgba(255, 255, 255, 0.322);
+          inset 0 5px 10px -6px rgba(255, 255, 255, 0.35),
+          inset 0 -5px 10px -6px rgba(255, 255, 255, 0.35);
         align-items: center;
         align-content: center;
         justify-content: center;
