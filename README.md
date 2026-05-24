@@ -1111,19 +1111,19 @@
             <span>Thương Hiệu</span>
             <!-- Cấp 2 -->
             <div class="submenu1">
-              <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+              <a href="https://otvgroup.github.io/OTVGroup">
                 <span>OTVGroup</span>
               </a>
-              <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+              <a href="https://otvgroup.github.io/OTIShop">
                 <span>OTISShop</span>
               </a>
-              <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+              <a href="https://otvgroup.github.io/OTIStore">
                 <span>OTISStore</span>
               </a>
-              <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+              <a href="https://otvgroup.github.io/OTIStudy">
                 <span>OTISStudy</span>
               </a>
-              <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+              <a href="#">
                 <span>OTISFilms</span>
               </a>
             </div>
@@ -1137,23 +1137,23 @@
                 <span>Truyền thông</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="#">
                     <i class="fa-solid fa-chart-line"></i>
                     <span>Nghiên Cứu Thị Trường</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="#">
                     <i class="fa-solid fa-diagram-project"></i>
                     <span>Hoạch Định Chiến Lược</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="#">
                     <i class="fa-solid fa-star"></i>
                     <span>Xây Dựng Thương Hiệu</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="#">
                     <i class="fa-solid fa-video"></i>
                     <span>Sản Xuất Nội Dung</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="#">
                     <i class="fa-solid fa-link"></i>
                     <span>Tiếp Thị Liên Kết</span>
                   </a>
@@ -1163,11 +1163,11 @@
                 <span>Thương mại</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="#">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span>Mua Sắm Trực Tuyến</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="#">
                     <i class="fa-solid fa-handshake"></i>
                     <span>Dịch Vụ Trung Gian</span>
                   </a>
@@ -1177,12 +1177,12 @@
                 <span>Học thuật</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="#">
                     <i class="fa-solid fa-book-open"></i>
                     <span>Tư Liệu Nghiên Cứu</span>
                   </a>
 
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="#">
                     <i class="fa-solid fa-chart-pie"></i>
                     <span>Báo Cáo & Phân Tích</span>
                   </a>
@@ -1192,11 +1192,11 @@
                 <span>Kỹ thuật</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="#">
                     <i class="fa-solid fa-chalkboard-user"></i>
                     <span>Thiết Kế & Phát Triển</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="#">
                     <i class="fa-solid fa-gear"></i>
                     <span>Cải Tiến & Ứng Dụng</span>
                   </a>
@@ -1206,15 +1206,15 @@
                 <span>Giải trí</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="#">
                     <i class="fa-solid fa-music"></i>
                     <span>Sáng Tác</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="#">
                     <i class="fa-solid fa-gamepad"></i>
                     <span>Streams</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="#">
                     <i class="fa-solid fa-photo-film"></i>
                     <span>Preview</span>
                   </a>
@@ -1231,31 +1231,19 @@
                 <span>Facebook</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="https://www.facebook.com/OtisVo586/" target="_blank">
-                    <span>Otis Võ</span>
+                  <a href="https://facebook.com/OTVGroup" target="_blank">
+                    <span>OTVGroup</span>
                   </a>
-                  <a
-                    href="https://www.facebook.com/OTV.OTISShop"
-                    target="_blank"
-                  >
+                  <a href="https://facebook.com/OTV.OTISShop" target="_blank">
                     <span>OTISShop</span>
                   </a>
-                  <a
-                    href="https://www.facebook.com/OTV.OTISStore"
-                    target="_blank"
-                  >
+                  <a href="https://facebook.com/OTV.OTISStore" target="_blank">
                     <span>OTISStore</span>
                   </a>
-                  <a
-                    href="https://www.facebook.com/OTV.OTISStudy"
-                    target="_blank"
-                  >
+                  <a href="https://facebook.com/OTV.OTISStudy" target="_blank">
                     <span>OTISStudy</span>
                   </a>
-                  <a
-                    href="https://otvgroup.github.io/OTVGroup/#"
-                    target="_blank"
-                  >
+                  <a href="#" target="_blank">
                     <span>OTISFilms</span>
                   </a>
                 </div>
@@ -1264,22 +1252,22 @@
                 <span>Youtube</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="https://youtube.com/@otvchannelvn" target="_blank">
                     <span>OTVChannel</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="https://youtube.com/@otvstoryvn" target="_blank">
                     <span>OTVStory</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="https://youtube.com/@otisshopvn" target="_blank">
                     <span>OTISShop</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="https://youtube.com/@otisstorevn" target="_blank">
                     <span>OTISStore</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="https://youtube.com/@otisstudyvn" target="_blank">
                     <span>OTISStudy</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="#" target="_blank">
                     <span>OTISFilms</span>
                   </a>
                 </div>
@@ -1288,19 +1276,19 @@
                 <span>TikTok</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="https://tiktok.com/@otvgroupvn" target="_blank">
                     <span>OTVGroup</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="https://tiktok.com/@otisshopvn" target="_blank">
                     <span>OTISShop</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="https://tiktok.com/@otisstore.vn" target="_blank">
                     <span>OTISStore</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="https://tiktok.com/@otisstudyvn" target="_blank">
                     <span>OTISStudy</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="#" target="_blank">
                     <span>OTISFilms</span>
                   </a>
                 </div>
@@ -1630,15 +1618,12 @@
         document.addEventListener("DOMContentLoaded", () => {
           const playlists = [
             // Kênh 1
-            "https://www.youtube.com/playlist?list=PLr-nq1_tAgavYM7vyXG_AT_JzMlduZCbr",
-            "https://www.youtube.com/playlist?list=PLr-nq1_tAgau_iAqQpgnqXh-HaM7gcvO9",
             "https://www.youtube.com/playlist?list=PLr-nq1_tAgavodoI2FRjpxCb8Yxa_Hu1k",
-            "https://www.youtube.com/playlist?list=PLr-nq1_tAgauoJ6hYN3Vk23wXk1oUlwr6",
             "https://www.youtube.com/playlist?list=PLr-nq1_tAgataBe8sMPCGvZCIlpPlgq4i",
-            "https://www.youtube.com/playlist?list=PLr-nq1_tAgavw66vBYWUTCwNXbXi_we6u",
             "https://www.youtube.com/playlist?list=PLr-nq1_tAgasf6lDFzZ34LCXk7WIScTmu",
             "https://www.youtube.com/playlist?list=PLr-nq1_tAgatx2oBmmzTCDbT3fknqYlYU",
             "https://www.youtube.com/playlist?list=PLr-nq1_tAgas2QA44VzY93Z6GqXpBt_vv",
+            "https://www.youtube.com/playlist?list=PLr-nq1_tAgau6jXasIEI9XWgWdn0-NAPx",
 
             // Kênh 2
             "https://www.youtube.com/playlist?list=PL038F8U56LOuuPeCx2Yee_qXY9oWD-KNG",
