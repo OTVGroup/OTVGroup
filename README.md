@@ -931,8 +931,8 @@
         aspect-ratio: 1;
         border-radius: 50%;
         background: #000;
+        padding: 2px;
         overflow: hidden;
-        border: 2px solid rgb(255, 255, 255);
         animation: spin 8s linear infinite;
       }
 
@@ -1010,7 +1010,7 @@
       /* ===== LOADING ===== */
 
       .playlist-loading {
-        padding: 45px;
+        padding: 15px;
         text-align: center;
         color: #777;
       }
@@ -1024,7 +1024,7 @@
 
       .playlist-empty {
         text-align: center;
-        padding: 55px 20px;
+        padding: 15px 20px;
         color: #666;
       }
 
@@ -2052,13 +2052,13 @@
             </button>
           </div>
         </div>
-        <div id="loading" class="playlist-loading" hidden>
-          <i class="fa-solid fa-spinner"></i>
-          Đang tải playlist...
-        </div>
         <div id="empty-result" class="playlist-empty" hidden>
           <i class="fa-solid fa-magnifying-glass"></i>
           Không tìm thấy playlist phù hợp.
+        </div>
+        <div id="loading" class="playlist-loading" hidden>
+          <i class="fa-solid fa-spinner"></i>
+          Đang tải playlist...
         </div>
         <div id="playlist-list" class="playlist-list"></div>
       </div>
@@ -3688,6 +3688,7 @@
             updated: "21/08/2026",
           },
         ];
+
         /* ========= DOM ========= */
         const searchInput = document.getElementById("search");
         const keywordBar = document.getElementById("playlist-keyword");
@@ -3849,6 +3850,8 @@
         function createCard(playlist, meta) {
           const card = document.createElement("article");
           card.className = "card";
+          card.dataset.playlistId =
+            getPlaylistId(playlist.url) || normalize(playlist.url);
           card.dataset.title = playlist.normalizedTitle;
           card.dataset.keywords = playlist.normalizedKeywords.join(",");
           card.dataset.score = "0";
@@ -3913,104 +3916,98 @@
         }
 
         /* ========= TÌM KIẾM / HIỂN THỊ ========= */
-
         function searchPlaylists() {
           const query = searchInput.value.trim();
           const words = splitKeywords(query).map(normalize);
-
           const cards = [...container.querySelectorAll(".card")];
-
-          /* =========================================
-     KHÔNG CÓ PLAYLIST
-     ========================================= */
-
           if (cards.length === 0) {
             empty.hidden = false;
             return;
           }
-
           const isSearching = words.length > 0;
-
-          let visible = 0;
-
-          /* =========================================
-     TÍNH ĐIỂM TÌM KIẾM
-     ========================================= */
-
-          cards.forEach((card) => {
-            const title = card.dataset.title || "";
-
-            const keywords = card.dataset.keywords
-              ? card.dataset.keywords.split(",")
-              : [];
-
-            let score = 0;
-
-            words.forEach((word) => {
-              /* Từ khóa xuất hiện trong tiêu đề */
-              if (title.includes(word)) {
-                score += 2;
-              }
-
-              /* Từ khóa trùng chính xác */
-              if (keywords.includes(word)) {
-                score += 3;
-              }
-            });
-
-            card.dataset.score = score;
-          });
-
-          /* =========================================
-     ẨN TẤT CẢ CARD
-     ========================================= */
-
-          cards.forEach((card) => {
+          /* * ========= TÍNH ĐIỂM ========= * * Mỗi playlist chỉ được tính 1 lần. * Ưu tiên playlist có nhiều key trùng nhất. */ cards.forEach(
+            (card) => {
+              const title = card.dataset.title || "";
+              const keywords = card.dataset.keywords
+                ? card.dataset.keywords.split(",")
+                : [];
+              let score = 0;
+              let matchedKeys = 0;
+              words.forEach((word) => {
+                let matched = false;
+                /* * Key trùng chính xác * => ưu tiên cao nhất */ if (
+                  keywords.includes(word)
+                ) {
+                  score += 3;
+                  matched = true;
+                } /* * Từ khóa xuất hiện trong title */ else if (
+                  title.includes(word)
+                ) {
+                  score += 2;
+                  matched = true;
+                }
+                /* * Đếm số key khác nhau đã trùng */ if (matched) {
+                  matchedKeys++;
+                }
+              });
+              card.dataset.score = score;
+              card.dataset.matchedKeys = matchedKeys;
+            },
+          );
+          /* * ========= ẨN TẤT CẢ ========= */ cards.forEach((card) => {
             card.style.display = "none";
           });
-
-          /* =========================================
-     CÓ TỪ KHÓA
-     → HIỆN TẤT CẢ KẾT QUẢ
-     ========================================= */
-
-          if (isSearching) {
+          /* * ========= CÓ TỪ KHÓA ========= */ if (isSearching) {
+            /* * Chống render trùng playlist */ const rendered = new Set();
             const results = cards
-              .filter((card) => Number(card.dataset.score) > 0)
-              .sort(
-                (a, b) => Number(b.dataset.score) - Number(a.dataset.score),
-              );
-
+              .filter((card) => {
+                return Number(card.dataset.matchedKeys) > 0;
+              })
+              .sort((a, b) => {
+                /* * 1. Ưu tiên nhiều key trùng hơn */ const keyDiff =
+                  Number(b.dataset.matchedKeys) - Number(a.dataset.matchedKeys);
+                if (keyDiff !== 0) {
+                  return keyDiff;
+                }
+                /* * 2. Nếu số key trùng bằng nhau * thì ưu tiên score cao hơn */ return (
+                  Number(b.dataset.score) - Number(a.dataset.score)
+                );
+              });
             results.forEach((card) => {
+              /* * playlistId đã được tạo từ URL */ const playlistId =
+                getPlaylistId(card.querySelector(".title")?.textContent) ||
+                card.dataset.title;
+              /* * Nếu card chưa có ID thì dùng * chính title làm khóa tạm. * * Tốt nhất nên bổ sung dataset.playlistId * ở createCard(). */ const uniqueKey =
+                card.dataset.playlistId || playlistId;
+              /* * Đã render rồi => bỏ qua */ if (rendered.has(uniqueKey)) {
+                return;
+              }
+              rendered.add(uniqueKey);
               card.style.display = "flex";
-              container.appendChild(card);
-              visible++;
             });
-
-            /*
-      Có tìm kiếm nhưng không có kết quả
-    */
+            const visible = results.filter((card) => {
+              return card.style.display === "flex";
+            }).length;
             empty.hidden = visible !== 0;
-          } else {
-            /* =========================================
-       KHÔNG CÓ TỪ KHÓA
-       → RANDOM 12 PLAYLIST
-       ========================================= */
-
-            const randomCards = shuffle(cards);
-
-            randomCards.slice(0, 12).forEach((card) => {
-              card.style.display = "flex";
-              container.appendChild(card);
-              visible++;
-            });
-
-            /*
-      Không có từ khóa và có playlist
-      → KHÔNG báo "không có kết quả"
-    */
-            empty.hidden = true;
+            return;
           }
+          /* * ========= KHÔNG CÓ TỪ KHÓA ========= * * Chỉ render tối đa 12 playlist. * Mỗi playlist đúng 1 lần. */ const rendered =
+            new Set();
+          const randomCards = shuffle(cards);
+          let visible = 0;
+          randomCards.forEach((card) => {
+            if (visible >= 12) {
+              return;
+            }
+            const uniqueKey = card.dataset.playlistId || card.dataset.title;
+            if (rendered.has(uniqueKey)) {
+              return;
+            }
+            rendered.add(uniqueKey);
+            card.style.display = "flex";
+            visible++;
+          });
+          empty.hidden = true;
         }
 
         /* ========= EVENT ========= */
@@ -4463,3 +4460,4 @@
     </script>
   </body>
 </html>
+
