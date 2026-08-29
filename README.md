@@ -917,17 +917,18 @@
         position: absolute;
         left: 10px;
         top: 50%;
+        left: 35px;
         transform: translateY(-50%);
         height: 45%;
         max-height: 120px;
-        aspect-ratio: 1/1;
+        aspect-ratio: 1;
         z-index: 3;
       }
 
       .vinyl {
         position: absolute;
-        left: 35px;
-        width: 100%;
+        height: 100%;
+        aspect-ratio: 1;
         border-radius: 50%;
         background: #000;
         overflow: hidden;
