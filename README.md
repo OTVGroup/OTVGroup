@@ -2064,171 +2064,1628 @@
       </div>
       <script>
         const playlists = [
+          // CODE
+
           {
             title: "Anh Sẽ Chẳng Buồn Đâu",
             url: "https://www.youtube.com/playlist?list=PLd95b6cb8PlI",
             count: "1",
-            updated: "46253",
+            updated: "19/08/2026",
           },
 
           {
             title: "Anh Chỉ Sợ Ngày Mai",
             url: "https://www.youtube.com/playlist?list=PLKTP51EN5nPo",
             count: "1",
-            updated: "46255",
+            updated: "21/08/2026",
           },
 
           {
             title: "Anh Sẽ Về Sớm Thôi",
             url: "https://www.youtube.com/playlist?list=PLEKEGJMWswNE",
             count: "1",
-            updated: "46263",
+            updated: "29/08/2026",
           },
 
           {
             title: "Ai Hay Chữ Ngờ",
             url: "https://www.youtube.com/playlist?list=PLJYke1IU5OmE",
             count: "1",
-            updated: "46262",
+            updated: "28/08/2026",
           },
           {
             title: "Ai Trách Ai Hờn",
             url: "https://www.youtube.com/playlist?list=PLaajcVfxMShk",
             count: "1",
-            updated: "46263",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Anh Đâu Ngờ",
+            url: "https://www.youtube.com/playlist?list=PLHWuQeZ-l1UY",
+            count: "1",
+            updated: "29/08/2026",
           },
 
           {
             title: "Ba Kiếp Tình Một Kiếp Duyên",
             url: "https://www.youtube.com/playlist?list=PLDX-2XsYYxF0",
             count: "1",
-            updated: "46256",
+            updated: "22/08/2026",
           },
 
           {
             title: "Bắt Con Bướm Vàng",
             url: "https://www.youtube.com/playlist?list=PLTr6LK9RESFU",
             count: "1",
-            updated: "46255",
+            updated: "21/08/2026",
           },
 
           {
             title: "Bình Yên Nhé",
             url: "https://www.youtube.com/playlist?list=PLfSwYJ0AuHGI",
             count: "1",
-            updated: "46262",
+            updated: "28/08/2026",
           },
 
           {
             title: "Chúng Ta Rồi Sẽ Hạnh Phúc",
             url: "https://www.youtube.com/playlist?list=PLFTz9wUCqEXI",
             count: "1",
-            updated: "46257",
+            updated: "23/08/2026",
           },
 
           {
             title: "Còn Anh Em Bỏ Cho Ai",
             url: "https://www.youtube.com/playlist?list=PLIi4jR8IerUc",
             count: "1",
-            updated: "46256",
+            updated: "22/08/2026",
           },
           {
             title: "Chuỗi Ngày Vắng Em",
             url: "https://www.youtube.com/playlist?list=PLBy1ctqi8fbc",
             count: "1",
-            updated: "46258",
+            updated: "24/08/2026",
           },
 
           {
             title: "Con Phố Vắng Em",
             url: "https://www.youtube.com/playlist?list=PLTxl70rlSo3w",
             count: "1",
-            updated: "46259",
+            updated: "25/08/2026",
           },
           {
             title: "Chàng Trai Bất Tử",
             url: "https://www.youtube.com/playlist?list=PLSom3Wy6OFOA",
             count: "1",
-            updated: "46253",
+            updated: "19/08/2026",
           },
 
           {
             title: "Chúng Ta Là Gì",
             url: "https://www.youtube.com/playlist?list=PLBg3Ns6800Qc",
             count: "1",
-            updated: "46258",
+            updated: "24/08/2026",
           },
 
           {
             title: "Điều Anh Không Nên Nghĩ Tới",
             url: "https://www.youtube.com/playlist?list=PLZKJAgUhh-CY",
             count: "1",
-            updated: "46258",
+            updated: "24/08/2026",
           },
 
           {
             title: "Đóa Phù Dung Cuối Cùng",
             url: "https://www.youtube.com/playlist?list=PLSUdMG6BgwxQ",
             count: "1",
-            updated: "46256",
+            updated: "22/08/2026",
           },
           {
             title: "Đừng Ai Nhắc Về Cô Ấy",
             url: "https://www.youtube.com/playlist?list=PLbA9TNgYTi9A",
             count: "1",
-            updated: "46256",
+            updated: "22/08/2026",
           },
 
           {
             title: "Đừng Giữ Trong Lòng",
             url: "https://www.youtube.com/playlist?list=PLfMcwvfj5JX",
             count: "1",
-            updated: "46255",
+            updated: "21/08/2026",
           },
           {
             title: "Đến Sau Một Người",
             url: "https://www.youtube.com/playlist?list=PLBB-lnphoD84",
             count: "1",
-            updated: "46262",
+            updated: "28/08/2026",
           },
           {
             title: "Địa Ngục Trần Gian",
             url: "https://www.youtube.com/playlist?list=PLAU54c7Wqqvc",
             count: "1",
-            updated: "46258",
+            updated: "24/08/2026",
           },
 
           {
             title: "Điều Khác Lạ",
             url: "https://www.youtube.com/playlist?list=PLWuI1Kjsi7zc",
             count: "1",
-            updated: "46254",
+            updated: "20/08/2026",
           },
 
           {
             title: "Dễ Thương",
             url: "https://www.youtube.com/playlist?list=PLDDLRdI8uRzc",
             count: "1",
-            updated: "46254",
+            updated: "20/08/2026",
           },
           {
             title: "Da Key",
             url: "https://www.youtube.com/playlist?list=PLc9L6CW_FKCQ",
             count: "1",
-            updated: "46254",
+            updated: "20/08/2026",
+          },
+          {
+            title: "Em Không Sai Chúng Ta Sai",
+            url: "https://www.youtube.com/playlist?list=PLWD_ycDPtWuI",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Em Đau Rồi Đấy",
+            url: "https://www.youtube.com/playlist?list=PLQ_Gc8L65JxI",
+            count: "1",
+            updated: "29/08/2026",
           },
 
           {
             title: "Hy Vọng Quá Hóa Đau Lòng",
             url: "https://www.youtube.com/playlist?list=PLCFLA6Q3G8PY",
             count: "1",
-            updated: "46254",
+            updated: "20/08/2026",
           },
           {
             title: "Họ Nói Thương Em",
             url: "https://www.youtube.com/playlist?list=PLfbm4wapbrGs",
             count: "1",
-            updated: "46262",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Họ Yêu Ai Mất Rồi",
+            url: "https://www.youtube.com/playlist?list=PLVp0Dy5367gM",
+            count: "1",
+            updated: "21/08/2026",
+          },
+
+          {
+            title: "Họa Sĩ Tồi",
+            url: "https://www.youtube.com/playlist?list=PLO0nc5dbgHws",
+            count: "1",
+            updated: "21/08/2026",
+          },
+          {
+            title: "Kỷ Niệm Giam Cầm Chúng Ta",
+            url: "https://www.youtube.com/playlist?list=PLUmBJIzBK0XI",
+            count: "1",
+            updated: "25/08/2026",
+          },
+
+          {
+            title: "Khuất Trong Sương Mù",
+            url: "https://www.youtube.com/playlist?list=PLGPBa_WVAowI",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Lỡ Yêu Người Đậm Sâu",
+            url: "https://www.youtube.com/playlist?list=PLOCcX9MA58jg",
+            count: "1",
+            updated: "22/08/2026",
+          },
+
+          {
+            title: "Lo Người Ướt Áo",
+            url: "https://www.youtube.com/playlist?list=PLRYeJMhbgLWs",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Là Tại Anh Sai",
+            url: "https://www.youtube.com/playlist?list=PLRX_6_vf5KLE",
+            count: "1",
+            updated: "23/08/2026",
+          },
+
+          {
+            title: "Mây Phong Tuyết",
+            url: "https://www.youtube.com/playlist?list=PLMq1zqelldj8",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Người Ta Sánh Hoa Ngọc Ngà",
+            url: "https://www.youtube.com/playlist?list=PLTxmPh4BnYPA",
+            count: "1",
+            updated: "22/08/2026",
+          },
+
+          {
+            title: "Người Quan Trọng Nhất",
+            url: "https://www.youtube.com/playlist?list=PLSccByzsMBmg",
+            count: "1",
+            updated: "21/08/2026",
+          },
+
+          {
+            title: "Người Lính Yêu Em",
+            url: "https://www.youtube.com/playlist?list=PLASVoq6SuAk8",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Ngày Em Đẹp Nhất",
+            url: "https://www.youtube.com/playlist?list=PLSvn4lCw6RYQ",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Người Phản Bội",
+            url: "https://www.youtube.com/playlist?list=PLQ__zoSkkH4E",
+            count: "1",
+            updated: "29/08/2026",
+          },
+          {
+            title: "Ngược Lối Yêu",
+            url: "https://www.youtube.com/playlist?list=PLdfbtn9pvxHI",
+            count: "1",
+            updated: "19/08/2026",
+          },
+          {
+            title: "Phận Em Ai Thương Hại",
+            url: "https://www.youtube.com/playlist?list=PLYAmFD_dAVvw",
+            count: "1",
+            updated: "21/08/2026",
+          },
+          {
+            title: "Phản Bội Chính Mình",
+            url: "https://www.youtube.com/playlist?list=PLbtwwFWNAZto",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Phận Kẻ Bọt Bèo",
+            url: "https://www.youtube.com/playlist?list=PLYgQHZtNJpmA",
+            count: "1",
+            updated: "25/08/2026",
+          },
+
+          {
+            title: "Quên Đi Ta Là Ai",
+            url: "https://www.youtube.com/playlist?list=PLdAwuFlZFPn4",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Rất Lâu Rồi Mới Khóc",
+            url: "https://www.youtube.com/playlist?list=PLRIPcUKYCqo0",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Suốt Đời Không Xứng",
+            url: "https://www.youtube.com/playlist?list=PLBJKnWhbq6LA",
+            count: "1",
+            updated: "25/08/2026",
+          },
+
+          {
+            title: "Sao Ta Ngược Lối",
+            url: "https://www.youtube.com/playlist?list=PLZNf1g3I12-A",
+            count: "1",
+            updated: "23/08/2026",
+          },
+          {
+            title: "Secret",
+            url: "https://www.youtube.com/playlist?list=PLeSFgYXKXE7o",
+            count: "1",
+            updated: "21/08/2026",
+          },
+
+          {
+            title: "Trước Khi Em Tồn Tại",
+            url: "https://www.youtube.com/playlist?list=PLVctHykOGqj8",
+            count: "1",
+            updated: "22/08/2026",
+          },
+          {
+            title: "Thắng Đời Thua Em",
+            url: "https://www.youtube.com/playlist?list=PLD5DnW3IKN0g",
+            count: "1",
+            updated: "25/08/2026",
+          },
+
+          {
+            title: "Vô Duyên",
+            url: "https://www.youtube.com/playlist?list=PLHU-bnUURpJU",
+            count: "1",
+            updated: "21/08/2026",
+          },
+          {
+            title: "Về",
+            url: "https://www.youtube.com/playlist?list=PLcqQGxi6_auo",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Giày Cao Gót Màu Đỏ",
+            url: "https://www.youtube.com/playlist?list=PLaWSxzeh1AIQ",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Khiên Ti Hí",
+            url: "https://www.youtube.com/playlist?list=PLQOLm2Ab2Nmo",
+            count: "2",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Uyên Ương Hí",
+            url: "https://www.youtube.com/playlist?list=PLB2zQKpqv5As",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Because I'm Stupid",
+            url: "https://www.youtube.com/playlist?list=PLbfonNBBxeAc",
+            count: "1",
+            updated: "21/08/2026",
+          },
+          {
+            title: "Horang Suwolga",
+            url: "https://www.youtube.com/playlist?list=PLGTvvre7gPzY",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Anh Sợ Yêu x Phải Chia Tay Thôi",
+            url: "https://www.youtube.com/playlist?list=PLdDux94TYqMg",
+            count: "1",
+            updated: "29/08/2026",
+          },
+          {
+            title: "Có Ai Hẹn Hò Cùng Em Chưa x LTA",
+            url: "https://www.youtube.com/playlist?list=PLG1ljZqsqLt8",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Câu Hứa Chưa Vẹn Tròn x DTND",
+            url: "https://www.youtube.com/playlist?list=PLXWyZg5n_lS8",
+            count: "2",
+            updated: "28/08/2026",
+          },
+
+          { title: "Danh Sách Phát", url: "Link", count: "%", updated: "Date" },
+
+          {
+            title: "Anh Sẽ Chẳng Buồn Đâu",
+            url: "https://www.youtube.com/playlist?list=PLd95b6cb8PlI",
+            count: "1",
+            updated: "19/08/2026",
+          },
+
+          {
+            title: "Anh Chỉ Sợ Ngày Mai",
+            url: "https://www.youtube.com/playlist?list=PLKTP51EN5nPo",
+            count: "1",
+            updated: "21/08/2026",
+          },
+
+          {
+            title: "Anh Sẽ Về Sớm Thôi",
+            url: "https://www.youtube.com/playlist?list=PLEKEGJMWswNE",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Ai Hay Chữ Ngờ",
+            url: "https://www.youtube.com/playlist?list=PLJYke1IU5OmE",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Ai Trách Ai Hờn",
+            url: "https://www.youtube.com/playlist?list=PLaajcVfxMShk",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Anh Đâu Ngờ",
+            url: "https://www.youtube.com/playlist?list=PLHWuQeZ-l1UY",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Ba Kiếp Tình Một Kiếp Duyên",
+            url: "https://www.youtube.com/playlist?list=PLDX-2XsYYxF0",
+            count: "1",
+            updated: "22/08/2026",
+          },
+
+          {
+            title: "Bắt Con Bướm Vàng",
+            url: "https://www.youtube.com/playlist?list=PLTr6LK9RESFU",
+            count: "1",
+            updated: "21/08/2026",
+          },
+
+          {
+            title: "Bình Yên Nhé",
+            url: "https://www.youtube.com/playlist?list=PLfSwYJ0AuHGI",
+            count: "1",
+            updated: "28/08/2026",
+          },
+
+          {
+            title: "Chúng Ta Rồi Sẽ Hạnh Phúc",
+            url: "https://www.youtube.com/playlist?list=PLFTz9wUCqEXI",
+            count: "1",
+            updated: "23/08/2026",
+          },
+
+          {
+            title: "Còn Anh Em Bỏ Cho Ai",
+            url: "https://www.youtube.com/playlist?list=PLIi4jR8IerUc",
+            count: "1",
+            updated: "22/08/2026",
+          },
+          {
+            title: "Chuỗi Ngày Vắng Em",
+            url: "https://www.youtube.com/playlist?list=PLBy1ctqi8fbc",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Con Phố Vắng Em",
+            url: "https://www.youtube.com/playlist?list=PLTxl70rlSo3w",
+            count: "1",
+            updated: "25/08/2026",
+          },
+          {
+            title: "Chàng Trai Bất Tử",
+            url: "https://www.youtube.com/playlist?list=PLSom3Wy6OFOA",
+            count: "1",
+            updated: "19/08/2026",
+          },
+
+          {
+            title: "Chúng Ta Là Gì",
+            url: "https://www.youtube.com/playlist?list=PLBg3Ns6800Qc",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Điều Anh Không Nên Nghĩ Tới",
+            url: "https://www.youtube.com/playlist?list=PLZKJAgUhh-CY",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Đóa Phù Dung Cuối Cùng",
+            url: "https://www.youtube.com/playlist?list=PLSUdMG6BgwxQ",
+            count: "1",
+            updated: "22/08/2026",
+          },
+          {
+            title: "Đừng Ai Nhắc Về Cô Ấy",
+            url: "https://www.youtube.com/playlist?list=PLbA9TNgYTi9A",
+            count: "1",
+            updated: "22/08/2026",
+          },
+
+          {
+            title: "Đừng Giữ Trong Lòng",
+            url: "https://www.youtube.com/playlist?list=PLfMcwvfj5JX",
+            count: "1",
+            updated: "21/08/2026",
+          },
+          {
+            title: "Đến Sau Một Người",
+            url: "https://www.youtube.com/playlist?list=PLBB-lnphoD84",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Địa Ngục Trần Gian",
+            url: "https://www.youtube.com/playlist?list=PLAU54c7Wqqvc",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Điều Khác Lạ",
+            url: "https://www.youtube.com/playlist?list=PLWuI1Kjsi7zc",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Dễ Thương",
+            url: "https://www.youtube.com/playlist?list=PLDDLRdI8uRzc",
+            count: "1",
+            updated: "20/08/2026",
+          },
+          {
+            title: "Da Key",
+            url: "https://www.youtube.com/playlist?list=PLc9L6CW_FKCQ",
+            count: "1",
+            updated: "20/08/2026",
+          },
+          {
+            title: "Em Không Sai Chúng Ta Sai",
+            url: "https://www.youtube.com/playlist?list=PLWD_ycDPtWuI",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Em Đau Rồi Đấy",
+            url: "https://www.youtube.com/playlist?list=PLQ_Gc8L65JxI",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Hy Vọng Quá Hóa Đau Lòng",
+            url: "https://www.youtube.com/playlist?list=PLCFLA6Q3G8PY",
+            count: "1",
+            updated: "20/08/2026",
+          },
+          {
+            title: "Họ Nói Thương Em",
+            url: "https://www.youtube.com/playlist?list=PLfbm4wapbrGs",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Họ Yêu Ai Mất Rồi",
+            url: "https://www.youtube.com/playlist?list=PLVp0Dy5367gM",
+            count: "1",
+            updated: "21/08/2026",
+          },
+
+          {
+            title: "Họa Sĩ Tồi",
+            url: "https://www.youtube.com/playlist?list=PLO0nc5dbgHws",
+            count: "1",
+            updated: "21/08/2026",
+          },
+          {
+            title: "Kỷ Niệm Giam Cầm Chúng Ta",
+            url: "https://www.youtube.com/playlist?list=PLUmBJIzBK0XI",
+            count: "1",
+            updated: "25/08/2026",
+          },
+
+          {
+            title: "Khuất Trong Sương Mù",
+            url: "https://www.youtube.com/playlist?list=PLGPBa_WVAowI",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Lỡ Yêu Người Đậm Sâu",
+            url: "https://www.youtube.com/playlist?list=PLOCcX9MA58jg",
+            count: "1",
+            updated: "22/08/2026",
+          },
+
+          {
+            title: "Lo Người Ướt Áo",
+            url: "https://www.youtube.com/playlist?list=PLRYeJMhbgLWs",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Là Tại Anh Sai",
+            url: "https://www.youtube.com/playlist?list=PLRX_6_vf5KLE",
+            count: "1",
+            updated: "23/08/2026",
+          },
+
+          {
+            title: "Mây Phong Tuyết",
+            url: "https://www.youtube.com/playlist?list=PLMq1zqelldj8",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Người Ta Sánh Hoa Ngọc Ngà",
+            url: "https://www.youtube.com/playlist?list=PLTxmPh4BnYPA",
+            count: "1",
+            updated: "22/08/2026",
+          },
+
+          {
+            title: "Người Quan Trọng Nhất",
+            url: "https://www.youtube.com/playlist?list=PLSccByzsMBmg",
+            count: "1",
+            updated: "21/08/2026",
+          },
+
+          {
+            title: "Người Lính Yêu Em",
+            url: "https://www.youtube.com/playlist?list=PLASVoq6SuAk8",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Ngày Em Đẹp Nhất",
+            url: "https://www.youtube.com/playlist?list=PLSvn4lCw6RYQ",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Người Phản Bội",
+            url: "https://www.youtube.com/playlist?list=PLQ__zoSkkH4E",
+            count: "1",
+            updated: "29/08/2026",
+          },
+          {
+            title: "Ngược Lối Yêu",
+            url: "https://www.youtube.com/playlist?list=PLdfbtn9pvxHI",
+            count: "1",
+            updated: "19/08/2026",
+          },
+          {
+            title: "Phận Em Ai Thương Hại",
+            url: "https://www.youtube.com/playlist?list=PLYAmFD_dAVvw",
+            count: "1",
+            updated: "21/08/2026",
+          },
+          {
+            title: "Phản Bội Chính Mình",
+            url: "https://www.youtube.com/playlist?list=PLbtwwFWNAZto",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Phận Kẻ Bọt Bèo",
+            url: "https://www.youtube.com/playlist?list=PLYgQHZtNJpmA",
+            count: "1",
+            updated: "25/08/2026",
+          },
+
+          {
+            title: "Quên Đi Ta Là Ai",
+            url: "https://www.youtube.com/playlist?list=PLdAwuFlZFPn4",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Rất Lâu Rồi Mới Khóc",
+            url: "https://www.youtube.com/playlist?list=PLRIPcUKYCqo0",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Suốt Đời Không Xứng",
+            url: "https://www.youtube.com/playlist?list=PLBJKnWhbq6LA",
+            count: "1",
+            updated: "25/08/2026",
+          },
+
+          {
+            title: "Sao Ta Ngược Lối",
+            url: "https://www.youtube.com/playlist?list=PLZNf1g3I12-A",
+            count: "1",
+            updated: "23/08/2026",
+          },
+          {
+            title: "Secret",
+            url: "https://www.youtube.com/playlist?list=PLeSFgYXKXE7o",
+            count: "1",
+            updated: "21/08/2026",
+          },
+
+          {
+            title: "Trước Khi Em Tồn Tại",
+            url: "https://www.youtube.com/playlist?list=PLVctHykOGqj8",
+            count: "1",
+            updated: "22/08/2026",
+          },
+          {
+            title: "Thắng Đời Thua Em",
+            url: "https://www.youtube.com/playlist?list=PLD5DnW3IKN0g",
+            count: "1",
+            updated: "25/08/2026",
+          },
+
+          {
+            title: "Vô Duyên",
+            url: "https://www.youtube.com/playlist?list=PLHU-bnUURpJU",
+            count: "1",
+            updated: "21/08/2026",
+          },
+          {
+            title: "Về",
+            url: "https://www.youtube.com/playlist?list=PLcqQGxi6_auo",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Giày Cao Gót Màu Đỏ",
+            url: "https://www.youtube.com/playlist?list=PLaWSxzeh1AIQ",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Khiên Ti Hí",
+            url: "https://www.youtube.com/playlist?list=PLQOLm2Ab2Nmo",
+            count: "2",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Uyên Ương Hí",
+            url: "https://www.youtube.com/playlist?list=PLB2zQKpqv5As",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Because I'm Stupid",
+            url: "https://www.youtube.com/playlist?list=PLbfonNBBxeAc",
+            count: "1",
+            updated: "21/08/2026",
+          },
+          {
+            title: "Horang Suwolga",
+            url: "https://www.youtube.com/playlist?list=PLGTvvre7gPzY",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Anh Sợ Yêu x Phải Chia Tay Thôi",
+            url: "https://www.youtube.com/playlist?list=PLdDux94TYqMg",
+            count: "1",
+            updated: "29/08/2026",
+          },
+          {
+            title: "Có Ai Hẹn Hò Cùng Em Chưa x LTA",
+            url: "https://www.youtube.com/playlist?list=PLG1ljZqsqLt8",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Câu Hứa Chưa Vẹn Tròn x DTND",
+            url: "https://www.youtube.com/playlist?list=PLXWyZg5n_lS8",
+            count: "2",
+            updated: "28/08/2026",
+          },
+
+          { title: "Danh Sách Phát", url: "Link", count: "%", updated: "Date" },
+
+          {
+            title: "Anh Sẽ Chẳng Buồn Đâu",
+            url: "https://www.youtube.com/playlist?list=PLd95b6cb8PlI",
+            count: "1",
+            updated: "19/08/2026",
+          },
+
+          {
+            title: "Anh Chỉ Sợ Ngày Mai",
+            url: "https://www.youtube.com/playlist?list=PLKTP51EN5nPo",
+            count: "1",
+            updated: "21/08/2026",
+          },
+
+          {
+            title: "Anh Sẽ Về Sớm Thôi",
+            url: "https://www.youtube.com/playlist?list=PLEKEGJMWswNE",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Ai Hay Chữ Ngờ",
+            url: "https://www.youtube.com/playlist?list=PLJYke1IU5OmE",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Ai Trách Ai Hờn",
+            url: "https://www.youtube.com/playlist?list=PLaajcVfxMShk",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Anh Đâu Ngờ",
+            url: "https://www.youtube.com/playlist?list=PLHWuQeZ-l1UY",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Ba Kiếp Tình Một Kiếp Duyên",
+            url: "https://www.youtube.com/playlist?list=PLDX-2XsYYxF0",
+            count: "1",
+            updated: "22/08/2026",
+          },
+
+          {
+            title: "Bắt Con Bướm Vàng",
+            url: "https://www.youtube.com/playlist?list=PLTr6LK9RESFU",
+            count: "1",
+            updated: "21/08/2026",
+          },
+
+          {
+            title: "Bình Yên Nhé",
+            url: "https://www.youtube.com/playlist?list=PLfSwYJ0AuHGI",
+            count: "1",
+            updated: "28/08/2026",
+          },
+
+          {
+            title: "Chúng Ta Rồi Sẽ Hạnh Phúc",
+            url: "https://www.youtube.com/playlist?list=PLFTz9wUCqEXI",
+            count: "1",
+            updated: "23/08/2026",
+          },
+
+          {
+            title: "Còn Anh Em Bỏ Cho Ai",
+            url: "https://www.youtube.com/playlist?list=PLIi4jR8IerUc",
+            count: "1",
+            updated: "22/08/2026",
+          },
+          {
+            title: "Chuỗi Ngày Vắng Em",
+            url: "https://www.youtube.com/playlist?list=PLBy1ctqi8fbc",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Con Phố Vắng Em",
+            url: "https://www.youtube.com/playlist?list=PLTxl70rlSo3w",
+            count: "1",
+            updated: "25/08/2026",
+          },
+          {
+            title: "Chàng Trai Bất Tử",
+            url: "https://www.youtube.com/playlist?list=PLSom3Wy6OFOA",
+            count: "1",
+            updated: "19/08/2026",
+          },
+
+          {
+            title: "Chúng Ta Là Gì",
+            url: "https://www.youtube.com/playlist?list=PLBg3Ns6800Qc",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Điều Anh Không Nên Nghĩ Tới",
+            url: "https://www.youtube.com/playlist?list=PLZKJAgUhh-CY",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Đóa Phù Dung Cuối Cùng",
+            url: "https://www.youtube.com/playlist?list=PLSUdMG6BgwxQ",
+            count: "1",
+            updated: "22/08/2026",
+          },
+          {
+            title: "Đừng Ai Nhắc Về Cô Ấy",
+            url: "https://www.youtube.com/playlist?list=PLbA9TNgYTi9A",
+            count: "1",
+            updated: "22/08/2026",
+          },
+
+          {
+            title: "Đừng Giữ Trong Lòng",
+            url: "https://www.youtube.com/playlist?list=PLfMcwvfj5JX",
+            count: "1",
+            updated: "21/08/2026",
+          },
+          {
+            title: "Đến Sau Một Người",
+            url: "https://www.youtube.com/playlist?list=PLBB-lnphoD84",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Địa Ngục Trần Gian",
+            url: "https://www.youtube.com/playlist?list=PLAU54c7Wqqvc",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Điều Khác Lạ",
+            url: "https://www.youtube.com/playlist?list=PLWuI1Kjsi7zc",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Dễ Thương",
+            url: "https://www.youtube.com/playlist?list=PLDDLRdI8uRzc",
+            count: "1",
+            updated: "20/08/2026",
+          },
+          {
+            title: "Da Key",
+            url: "https://www.youtube.com/playlist?list=PLc9L6CW_FKCQ",
+            count: "1",
+            updated: "20/08/2026",
+          },
+          {
+            title: "Em Không Sai Chúng Ta Sai",
+            url: "https://www.youtube.com/playlist?list=PLWD_ycDPtWuI",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Em Đau Rồi Đấy",
+            url: "https://www.youtube.com/playlist?list=PLQ_Gc8L65JxI",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Hy Vọng Quá Hóa Đau Lòng",
+            url: "https://www.youtube.com/playlist?list=PLCFLA6Q3G8PY",
+            count: "1",
+            updated: "20/08/2026",
+          },
+          {
+            title: "Họ Nói Thương Em",
+            url: "https://www.youtube.com/playlist?list=PLfbm4wapbrGs",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Họ Yêu Ai Mất Rồi",
+            url: "https://www.youtube.com/playlist?list=PLVp0Dy5367gM",
+            count: "1",
+            updated: "21/08/2026",
+          },
+
+          {
+            title: "Họa Sĩ Tồi",
+            url: "https://www.youtube.com/playlist?list=PLO0nc5dbgHws",
+            count: "1",
+            updated: "21/08/2026",
+          },
+          {
+            title: "Kỷ Niệm Giam Cầm Chúng Ta",
+            url: "https://www.youtube.com/playlist?list=PLUmBJIzBK0XI",
+            count: "1",
+            updated: "25/08/2026",
+          },
+
+          {
+            title: "Khuất Trong Sương Mù",
+            url: "https://www.youtube.com/playlist?list=PLGPBa_WVAowI",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Lỡ Yêu Người Đậm Sâu",
+            url: "https://www.youtube.com/playlist?list=PLOCcX9MA58jg",
+            count: "1",
+            updated: "22/08/2026",
+          },
+
+          {
+            title: "Lo Người Ướt Áo",
+            url: "https://www.youtube.com/playlist?list=PLRYeJMhbgLWs",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Là Tại Anh Sai",
+            url: "https://www.youtube.com/playlist?list=PLRX_6_vf5KLE",
+            count: "1",
+            updated: "23/08/2026",
+          },
+
+          {
+            title: "Mây Phong Tuyết",
+            url: "https://www.youtube.com/playlist?list=PLMq1zqelldj8",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Người Ta Sánh Hoa Ngọc Ngà",
+            url: "https://www.youtube.com/playlist?list=PLTxmPh4BnYPA",
+            count: "1",
+            updated: "22/08/2026",
+          },
+
+          {
+            title: "Người Quan Trọng Nhất",
+            url: "https://www.youtube.com/playlist?list=PLSccByzsMBmg",
+            count: "1",
+            updated: "21/08/2026",
+          },
+
+          {
+            title: "Người Lính Yêu Em",
+            url: "https://www.youtube.com/playlist?list=PLASVoq6SuAk8",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Ngày Em Đẹp Nhất",
+            url: "https://www.youtube.com/playlist?list=PLSvn4lCw6RYQ",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Người Phản Bội",
+            url: "https://www.youtube.com/playlist?list=PLQ__zoSkkH4E",
+            count: "1",
+            updated: "29/08/2026",
+          },
+          {
+            title: "Ngược Lối Yêu",
+            url: "https://www.youtube.com/playlist?list=PLdfbtn9pvxHI",
+            count: "1",
+            updated: "19/08/2026",
+          },
+          {
+            title: "Phận Em Ai Thương Hại",
+            url: "https://www.youtube.com/playlist?list=PLYAmFD_dAVvw",
+            count: "1",
+            updated: "21/08/2026",
+          },
+          {
+            title: "Phản Bội Chính Mình",
+            url: "https://www.youtube.com/playlist?list=PLbtwwFWNAZto",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Phận Kẻ Bọt Bèo",
+            url: "https://www.youtube.com/playlist?list=PLYgQHZtNJpmA",
+            count: "1",
+            updated: "25/08/2026",
+          },
+
+          {
+            title: "Quên Đi Ta Là Ai",
+            url: "https://www.youtube.com/playlist?list=PLdAwuFlZFPn4",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Rất Lâu Rồi Mới Khóc",
+            url: "https://www.youtube.com/playlist?list=PLRIPcUKYCqo0",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Suốt Đời Không Xứng",
+            url: "https://www.youtube.com/playlist?list=PLBJKnWhbq6LA",
+            count: "1",
+            updated: "25/08/2026",
+          },
+
+          {
+            title: "Sao Ta Ngược Lối",
+            url: "https://www.youtube.com/playlist?list=PLZNf1g3I12-A",
+            count: "1",
+            updated: "23/08/2026",
+          },
+          {
+            title: "Secret",
+            url: "https://www.youtube.com/playlist?list=PLeSFgYXKXE7o",
+            count: "1",
+            updated: "21/08/2026",
+          },
+
+          {
+            title: "Trước Khi Em Tồn Tại",
+            url: "https://www.youtube.com/playlist?list=PLVctHykOGqj8",
+            count: "1",
+            updated: "22/08/2026",
+          },
+          {
+            title: "Thắng Đời Thua Em",
+            url: "https://www.youtube.com/playlist?list=PLD5DnW3IKN0g",
+            count: "1",
+            updated: "25/08/2026",
+          },
+
+          {
+            title: "Vô Duyên",
+            url: "https://www.youtube.com/playlist?list=PLHU-bnUURpJU",
+            count: "1",
+            updated: "21/08/2026",
+          },
+          {
+            title: "Về",
+            url: "https://www.youtube.com/playlist?list=PLcqQGxi6_auo",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Giày Cao Gót Màu Đỏ",
+            url: "https://www.youtube.com/playlist?list=PLaWSxzeh1AIQ",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Khiên Ti Hí",
+            url: "https://www.youtube.com/playlist?list=PLQOLm2Ab2Nmo",
+            count: "2",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Uyên Ương Hí",
+            url: "https://www.youtube.com/playlist?list=PLB2zQKpqv5As",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Because I'm Stupid",
+            url: "https://www.youtube.com/playlist?list=PLbfonNBBxeAc",
+            count: "1",
+            updated: "21/08/2026",
+          },
+          {
+            title: "Horang Suwolga",
+            url: "https://www.youtube.com/playlist?list=PLGTvvre7gPzY",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Anh Sợ Yêu x Phải Chia Tay Thôi",
+            url: "https://www.youtube.com/playlist?list=PLdDux94TYqMg",
+            count: "1",
+            updated: "29/08/2026",
+          },
+          {
+            title: "Có Ai Hẹn Hò Cùng Em Chưa x LTA",
+            url: "https://www.youtube.com/playlist?list=PLG1ljZqsqLt8",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Câu Hứa Chưa Vẹn Tròn x DTND",
+            url: "https://www.youtube.com/playlist?list=PLXWyZg5n_lS8",
+            count: "2",
+            updated: "28/08/2026",
+          },
+
+          { title: "Danh Sách Phát", url: "Link", count: "%", updated: "Date" },
+
+          {
+            title: "Anh Sẽ Chẳng Buồn Đâu",
+            url: "https://www.youtube.com/playlist?list=PLd95b6cb8PlI",
+            count: "1",
+            updated: "19/08/2026",
+          },
+
+          {
+            title: "Anh Chỉ Sợ Ngày Mai",
+            url: "https://www.youtube.com/playlist?list=PLKTP51EN5nPo",
+            count: "1",
+            updated: "21/08/2026",
+          },
+
+          {
+            title: "Anh Sẽ Về Sớm Thôi",
+            url: "https://www.youtube.com/playlist?list=PLEKEGJMWswNE",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Ai Hay Chữ Ngờ",
+            url: "https://www.youtube.com/playlist?list=PLJYke1IU5OmE",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Ai Trách Ai Hờn",
+            url: "https://www.youtube.com/playlist?list=PLaajcVfxMShk",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Anh Đâu Ngờ",
+            url: "https://www.youtube.com/playlist?list=PLHWuQeZ-l1UY",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Ba Kiếp Tình Một Kiếp Duyên",
+            url: "https://www.youtube.com/playlist?list=PLDX-2XsYYxF0",
+            count: "1",
+            updated: "22/08/2026",
+          },
+
+          {
+            title: "Bắt Con Bướm Vàng",
+            url: "https://www.youtube.com/playlist?list=PLTr6LK9RESFU",
+            count: "1",
+            updated: "21/08/2026",
+          },
+
+          {
+            title: "Bình Yên Nhé",
+            url: "https://www.youtube.com/playlist?list=PLfSwYJ0AuHGI",
+            count: "1",
+            updated: "28/08/2026",
+          },
+
+          {
+            title: "Chúng Ta Rồi Sẽ Hạnh Phúc",
+            url: "https://www.youtube.com/playlist?list=PLFTz9wUCqEXI",
+            count: "1",
+            updated: "23/08/2026",
+          },
+
+          {
+            title: "Còn Anh Em Bỏ Cho Ai",
+            url: "https://www.youtube.com/playlist?list=PLIi4jR8IerUc",
+            count: "1",
+            updated: "22/08/2026",
+          },
+          {
+            title: "Chuỗi Ngày Vắng Em",
+            url: "https://www.youtube.com/playlist?list=PLBy1ctqi8fbc",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Con Phố Vắng Em",
+            url: "https://www.youtube.com/playlist?list=PLTxl70rlSo3w",
+            count: "1",
+            updated: "25/08/2026",
+          },
+          {
+            title: "Chàng Trai Bất Tử",
+            url: "https://www.youtube.com/playlist?list=PLSom3Wy6OFOA",
+            count: "1",
+            updated: "19/08/2026",
+          },
+
+          {
+            title: "Chúng Ta Là Gì",
+            url: "https://www.youtube.com/playlist?list=PLBg3Ns6800Qc",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Điều Anh Không Nên Nghĩ Tới",
+            url: "https://www.youtube.com/playlist?list=PLZKJAgUhh-CY",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Đóa Phù Dung Cuối Cùng",
+            url: "https://www.youtube.com/playlist?list=PLSUdMG6BgwxQ",
+            count: "1",
+            updated: "22/08/2026",
+          },
+          {
+            title: "Đừng Ai Nhắc Về Cô Ấy",
+            url: "https://www.youtube.com/playlist?list=PLbA9TNgYTi9A",
+            count: "1",
+            updated: "22/08/2026",
+          },
+
+          {
+            title: "Đừng Giữ Trong Lòng",
+            url: "https://www.youtube.com/playlist?list=PLfMcwvfj5JX",
+            count: "1",
+            updated: "21/08/2026",
+          },
+          {
+            title: "Đến Sau Một Người",
+            url: "https://www.youtube.com/playlist?list=PLBB-lnphoD84",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Địa Ngục Trần Gian",
+            url: "https://www.youtube.com/playlist?list=PLAU54c7Wqqvc",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Điều Khác Lạ",
+            url: "https://www.youtube.com/playlist?list=PLWuI1Kjsi7zc",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Dễ Thương",
+            url: "https://www.youtube.com/playlist?list=PLDDLRdI8uRzc",
+            count: "1",
+            updated: "20/08/2026",
+          },
+          {
+            title: "Da Key",
+            url: "https://www.youtube.com/playlist?list=PLc9L6CW_FKCQ",
+            count: "1",
+            updated: "20/08/2026",
+          },
+          {
+            title: "Em Không Sai Chúng Ta Sai",
+            url: "https://www.youtube.com/playlist?list=PLWD_ycDPtWuI",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Em Đau Rồi Đấy",
+            url: "https://www.youtube.com/playlist?list=PLQ_Gc8L65JxI",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Hy Vọng Quá Hóa Đau Lòng",
+            url: "https://www.youtube.com/playlist?list=PLCFLA6Q3G8PY",
+            count: "1",
+            updated: "20/08/2026",
+          },
+          {
+            title: "Họ Nói Thương Em",
+            url: "https://www.youtube.com/playlist?list=PLfbm4wapbrGs",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Họ Yêu Ai Mất Rồi",
+            url: "https://www.youtube.com/playlist?list=PLVp0Dy5367gM",
+            count: "1",
+            updated: "21/08/2026",
+          },
+
+          {
+            title: "Họa Sĩ Tồi",
+            url: "https://www.youtube.com/playlist?list=PLO0nc5dbgHws",
+            count: "1",
+            updated: "21/08/2026",
+          },
+          {
+            title: "Kỷ Niệm Giam Cầm Chúng Ta",
+            url: "https://www.youtube.com/playlist?list=PLUmBJIzBK0XI",
+            count: "1",
+            updated: "25/08/2026",
+          },
+
+          {
+            title: "Khuất Trong Sương Mù",
+            url: "https://www.youtube.com/playlist?list=PLGPBa_WVAowI",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Lỡ Yêu Người Đậm Sâu",
+            url: "https://www.youtube.com/playlist?list=PLOCcX9MA58jg",
+            count: "1",
+            updated: "22/08/2026",
+          },
+
+          {
+            title: "Lo Người Ướt Áo",
+            url: "https://www.youtube.com/playlist?list=PLRYeJMhbgLWs",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Là Tại Anh Sai",
+            url: "https://www.youtube.com/playlist?list=PLRX_6_vf5KLE",
+            count: "1",
+            updated: "23/08/2026",
+          },
+
+          {
+            title: "Mây Phong Tuyết",
+            url: "https://www.youtube.com/playlist?list=PLMq1zqelldj8",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Người Ta Sánh Hoa Ngọc Ngà",
+            url: "https://www.youtube.com/playlist?list=PLTxmPh4BnYPA",
+            count: "1",
+            updated: "22/08/2026",
+          },
+
+          {
+            title: "Người Quan Trọng Nhất",
+            url: "https://www.youtube.com/playlist?list=PLSccByzsMBmg",
+            count: "1",
+            updated: "21/08/2026",
+          },
+
+          {
+            title: "Người Lính Yêu Em",
+            url: "https://www.youtube.com/playlist?list=PLASVoq6SuAk8",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Ngày Em Đẹp Nhất",
+            url: "https://www.youtube.com/playlist?list=PLSvn4lCw6RYQ",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Người Phản Bội",
+            url: "https://www.youtube.com/playlist?list=PLQ__zoSkkH4E",
+            count: "1",
+            updated: "29/08/2026",
+          },
+          {
+            title: "Ngược Lối Yêu",
+            url: "https://www.youtube.com/playlist?list=PLdfbtn9pvxHI",
+            count: "1",
+            updated: "19/08/2026",
+          },
+          {
+            title: "Phận Em Ai Thương Hại",
+            url: "https://www.youtube.com/playlist?list=PLYAmFD_dAVvw",
+            count: "1",
+            updated: "21/08/2026",
+          },
+          {
+            title: "Phản Bội Chính Mình",
+            url: "https://www.youtube.com/playlist?list=PLbtwwFWNAZto",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Phận Kẻ Bọt Bèo",
+            url: "https://www.youtube.com/playlist?list=PLYgQHZtNJpmA",
+            count: "1",
+            updated: "25/08/2026",
+          },
+
+          {
+            title: "Quên Đi Ta Là Ai",
+            url: "https://www.youtube.com/playlist?list=PLdAwuFlZFPn4",
+            count: "1",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Rất Lâu Rồi Mới Khóc",
+            url: "https://www.youtube.com/playlist?list=PLRIPcUKYCqo0",
+            count: "1",
+            updated: "24/08/2026",
+          },
+
+          {
+            title: "Suốt Đời Không Xứng",
+            url: "https://www.youtube.com/playlist?list=PLBJKnWhbq6LA",
+            count: "1",
+            updated: "25/08/2026",
+          },
+
+          {
+            title: "Sao Ta Ngược Lối",
+            url: "https://www.youtube.com/playlist?list=PLZNf1g3I12-A",
+            count: "1",
+            updated: "23/08/2026",
+          },
+          {
+            title: "Secret",
+            url: "https://www.youtube.com/playlist?list=PLeSFgYXKXE7o",
+            count: "1",
+            updated: "21/08/2026",
+          },
+
+          {
+            title: "Trước Khi Em Tồn Tại",
+            url: "https://www.youtube.com/playlist?list=PLVctHykOGqj8",
+            count: "1",
+            updated: "22/08/2026",
+          },
+          {
+            title: "Thắng Đời Thua Em",
+            url: "https://www.youtube.com/playlist?list=PLD5DnW3IKN0g",
+            count: "1",
+            updated: "25/08/2026",
+          },
+
+          {
+            title: "Vô Duyên",
+            url: "https://www.youtube.com/playlist?list=PLHU-bnUURpJU",
+            count: "1",
+            updated: "21/08/2026",
+          },
+          {
+            title: "Về",
+            url: "https://www.youtube.com/playlist?list=PLcqQGxi6_auo",
+            count: "1",
+            updated: "20/08/2026",
+          },
+
+          {
+            title: "Giày Cao Gót Màu Đỏ",
+            url: "https://www.youtube.com/playlist?list=PLaWSxzeh1AIQ",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Khiên Ti Hí",
+            url: "https://www.youtube.com/playlist?list=PLQOLm2Ab2Nmo",
+            count: "2",
+            updated: "29/08/2026",
+          },
+
+          {
+            title: "Uyên Ương Hí",
+            url: "https://www.youtube.com/playlist?list=PLB2zQKpqv5As",
+            count: "1",
+            updated: "28/08/2026",
+          },
+          {
+            title: "Because I'm Stupid",
+            url: "https://www.youtube.com/playlist?list=PLbfonNBBxeAc",
+            count: "1",
+            updated: "21/08/2026",
           },
         ];
         /* ========= DOM ========= */
