@@ -294,7 +294,6 @@
       .bottom {
         position: fixed;
         display: flex;
-        flex-direction: row;
         align-items: center;
         overflow-x: scroll;
         align-content: center;
@@ -747,6 +746,371 @@
         }
       }
 
+      /* PLAYLIST VIDEOS */
+      /* ===== PLAYLIST LAYOUT ===== */
+      .playlist-content {
+        width: 100%;
+        margin: auto;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        background: #000;
+        color: #fff;
+      }
+
+      /* ===== SEARCH ===== */
+
+      .playlist-search {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: linear-gradient(#000 72%, transparent);
+      }
+
+      #search {
+        width: 100%;
+        height: 35px;
+        padding: 0 15px;
+        border: none;
+        border-radius: 999px;
+        background: #181818;
+        color: #fff;
+        font-size: 15px;
+        outline: none;
+        transition: 0.25s;
+      }
+
+      #search::placeholder {
+        color: #777;
+      }
+
+      #search:focus {
+        background: #202020;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.15);
+      }
+
+      /* ===== KEYWORDS ===== */
+
+      .playlist-keyword {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin: 5px 0;
+      }
+
+      .keyword {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 10px;
+        border-radius: 999px;
+        background: #1c1c1c;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        font-size: 12px;
+        color: #ddd;
+        cursor: pointer;
+        transition: 0.25s;
+      }
+
+      .keyword:hover {
+        background: #2c2c2c;
+        color: #fff;
+      }
+
+      .keyword.active {
+        background: #fff;
+        color: #000;
+      }
+
+      .refresh-keyword {
+        width: 34px;
+        height: 34px;
+        padding: 0;
+      }
+
+      .refresh-keyword:hover {
+        transform: rotate(90deg);
+      }
+
+      /* ===== GRID ===== */
+
+      .playlist-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+        gap: 10px;
+      }
+
+      /* ===== CARD ===== */
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(180deg, #171717, #101010);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.25s;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255, 255, 255, 0.12);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+      }
+
+      .card:active {
+        transform: scale(0.99);
+      }
+
+      /* ===== THUMB ===== */
+
+      .thumb {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16/9;
+        overflow: hidden;
+        background: #050505;
+      }
+
+      .bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.6);
+        transform: scale(1.02);
+        transition: 0.4s;
+      }
+
+      .card:hover .bg {
+        transform: scale(1.06);
+        filter: brightness(0.75);
+      }
+
+      .thumb::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.45),
+          transparent 65%
+        );
+        z-index: 1;
+      }
+
+      .thumb::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.6),
+          transparent 60%
+        );
+        z-index: 1;
+      }
+
+      /* ===== VINYL LOGO ===== */
+
+      .cover-wrap {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 45%;
+        max-height: 120px;
+        aspect-ratio: 1/1;
+        z-index: 3;
+      }
+
+      .vinyl {
+        position: absolute;
+        left: 35px;
+        width: 100%;
+        border-radius: 50%;
+        background: #000;
+        overflow: hidden;
+        border: 2px solid rgb(255, 255, 255);
+        animation: spin 8s linear infinite;
+      }
+
+      .vinyl img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* ===== PLAY BUTTON ===== */
+
+      .play {
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+        width: 44px;
+        height: 44px;
+        border: none;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.55);
+        backdrop-filter: blur(8px);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+        transition: 0.25s;
+      }
+
+      .play:hover {
+        background: #fff;
+        color: #000;
+        transform: scale(1.08);
+      }
+
+      /* ===== INFO ===== */
+
+      .info {
+        padding: 14px;
+      }
+
+      .title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.35;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        overflow: hidden;
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 8px;
+        font-size: 12px;
+        color: #8d8d8d;
+      }
+
+      .meta div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      /* ===== LOADING ===== */
+
+      .playlist-loading {
+        padding: 45px;
+        text-align: center;
+        color: #777;
+      }
+
+      .playlist-loading i {
+        margin-right: 8px;
+        animation: spin 1s linear infinite;
+      }
+
+      /* ===== EMPTY ===== */
+
+      .playlist-empty {
+        text-align: center;
+        padding: 55px 20px;
+        color: #666;
+      }
+
+      .playlist-empty i {
+        display: block;
+        margin-bottom: 12px;
+        font-size: 30px;
+      }
+
+      /* ===== TABLET ===== */
+
+      @media (max-width: 768px) {
+        .playlist-content {
+          padding: 12px 12px 40px;
+        }
+
+        .playlist-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .title {
+          font-size: 16px;
+        }
+      }
+
+      /* ===== MOBILE ===== */
+
+      @media (max-width: 520px) {
+        .playlist-content {
+          padding: 10px 10px 36px;
+        }
+
+        .playlist-list {
+          grid-template-columns: 1fr;
+        }
+
+        #search {
+          height: 44px;
+          font-size: 14px;
+        }
+
+        .keyword {
+          font-size: 11px;
+          padding: 6px 12px;
+        }
+
+        .title {
+          font-size: 17px;
+        }
+
+        .meta {
+          font-size: 11px;
+          gap: 8px;
+        }
+
+        .play {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      /* ===== TOUCH DEVICES ===== */
+
+      @media (hover: none) {
+        .card:hover,
+        .play:hover,
+        .keyword:hover {
+          transform: none;
+        }
+
+        .card:hover .bg {
+          transform: scale(1.02);
+          filter: brightness(0.6);
+        }
+      }
+
+      /* ===== REDUCED MOTION ===== */
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+
       /* SERVICE-SCROLL */
       .service-scroll {
         width: 100%;
@@ -1111,19 +1475,19 @@
             <span>Thương Hiệu</span>
             <!-- Cấp 2 -->
             <div class="submenu1">
-              <a href="https://otvgroup.github.io/OTVGroup">
+              <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                 <span>OTVGroup</span>
               </a>
-              <a href="https://otvgroup.github.io/OTISShop">
+              <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                 <span>OTISShop</span>
               </a>
-              <a href="https://otvgroup.github.io/OTISStore">
+              <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                 <span>OTISStore</span>
               </a>
-              <a href="https://otvgroup.github.io/OTISStudy">
+              <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                 <span>OTISStudy</span>
               </a>
-              <a href="https://otvgroup.github.io/OTISFilms">
+              <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                 <span>OTISFilms</span>
               </a>
             </div>
@@ -1137,23 +1501,23 @@
                 <span>Truyền thông</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="#">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <i class="fa-solid fa-chart-line"></i>
                     <span>Nghiên Cứu Thị Trường</span>
                   </a>
-                  <a href="#">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <i class="fa-solid fa-diagram-project"></i>
                     <span>Hoạch Định Chiến Lược</span>
                   </a>
-                  <a href="#">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <i class="fa-solid fa-star"></i>
                     <span>Xây Dựng Thương Hiệu</span>
                   </a>
-                  <a href="#">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <i class="fa-solid fa-video"></i>
                     <span>Sản Xuất Nội Dung</span>
                   </a>
-                  <a href="#">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <i class="fa-solid fa-link"></i>
                     <span>Tiếp Thị Liên Kết</span>
                   </a>
@@ -1163,11 +1527,11 @@
                 <span>Thương mại</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="#">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span>Mua Sắm Trực Tuyến</span>
                   </a>
-                  <a href="#">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <i class="fa-solid fa-handshake"></i>
                     <span>Dịch Vụ Trung Gian</span>
                   </a>
@@ -1177,12 +1541,12 @@
                 <span>Học thuật</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="#">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <i class="fa-solid fa-book-open"></i>
                     <span>Tư Liệu Nghiên Cứu</span>
                   </a>
 
-                  <a href="#">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <i class="fa-solid fa-chart-pie"></i>
                     <span>Báo Cáo & Phân Tích</span>
                   </a>
@@ -1192,11 +1556,11 @@
                 <span>Kỹ thuật</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="#">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <i class="fa-solid fa-chalkboard-user"></i>
                     <span>Thiết Kế & Phát Triển</span>
                   </a>
-                  <a href="#">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <i class="fa-solid fa-gear"></i>
                     <span>Cải Tiến & Ứng Dụng</span>
                   </a>
@@ -1206,15 +1570,15 @@
                 <span>Giải trí</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="#">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <i class="fa-solid fa-music"></i>
                     <span>Sáng Tác</span>
                   </a>
-                  <a href="#">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <i class="fa-solid fa-gamepad"></i>
                     <span>Streams</span>
                   </a>
-                  <a href="#">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <i class="fa-solid fa-photo-film"></i>
                     <span>Preview</span>
                   </a>
@@ -1231,19 +1595,31 @@
                 <span>Facebook</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="https://facebook.com/OTVGroup" target="_blank">
-                    <span>OTVGroup</span>
+                  <a href="https://www.facebook.com/OtisVo586/" target="_blank">
+                    <span>Otis Võ</span>
                   </a>
-                  <a href="https://facebook.com/OTV.OTISShop" target="_blank">
+                  <a
+                    href="https://www.facebook.com/OTV.OTISShop"
+                    target="_blank"
+                  >
                     <span>OTISShop</span>
                   </a>
-                  <a href="https://facebook.com/OTV.OTISStore" target="_blank">
+                  <a
+                    href="https://www.facebook.com/OTV.OTISStore"
+                    target="_blank"
+                  >
                     <span>OTISStore</span>
                   </a>
-                  <a href="https://facebook.com/OTV.OTISStudy" target="_blank">
+                  <a
+                    href="https://www.facebook.com/OTV.OTISStudy"
+                    target="_blank"
+                  >
                     <span>OTISStudy</span>
                   </a>
-                  <a href="#" target="_blank">
+                  <a
+                    href="https://otvgroup.github.io/OTVGroup/#"
+                    target="_blank"
+                  >
                     <span>OTISFilms</span>
                   </a>
                 </div>
@@ -1252,22 +1628,22 @@
                 <span>Youtube</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="https://youtube.com/@otvchannelvn" target="_blank">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <span>OTVChannel</span>
                   </a>
-                  <a href="https://youtube.com/@otvstoryvn" target="_blank">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <span>OTVStory</span>
                   </a>
-                  <a href="https://youtube.com/@otisshopvn" target="_blank">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <span>OTISShop</span>
                   </a>
-                  <a href="https://youtube.com/@otisstorevn" target="_blank">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <span>OTISStore</span>
                   </a>
-                  <a href="https://youtube.com/@otisstudyvn" target="_blank">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <span>OTISStudy</span>
                   </a>
-                  <a href="#" target="_blank">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <span>OTISFilms</span>
                   </a>
                 </div>
@@ -1276,19 +1652,19 @@
                 <span>TikTok</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="https://tiktok.com/@otvgroupvn" target="_blank">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <span>OTVGroup</span>
                   </a>
-                  <a href="https://tiktok.com/@otisshopvn" target="_blank">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <span>OTISShop</span>
                   </a>
-                  <a href="https://tiktok.com/@otisstore.vn" target="_blank">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <span>OTISStore</span>
                   </a>
-                  <a href="https://tiktok.com/@otisstudyvn" target="_blank">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <span>OTISStudy</span>
                   </a>
-                  <a href="#" target="_blank">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
                     <span>OTISFilms</span>
                   </a>
                 </div>
@@ -1610,25 +1986,28 @@
           }
         });
       </script>
+
+      <!-- COMPILATION PLAYLISTS -->
       <div class="post s-info view" id="playlist">
-        <div class="header">YOUTUBE PLAYLIST</div>
+        <div class="header">COMPILATION PLAYLISTS</div>
         <!-- Các video sẽ tự động tạo div .p_1 và nhúng iframe ở đây -->
       </div>
       <script>
         document.addEventListener("DOMContentLoaded", () => {
           const playlists = [
             // Kênh 1
-            "https://www.youtube.com/playlist?list=PLr-nq1_tAgavodoI2FRjpxCb8Yxa_Hu1k",
+            "https://www.youtube.com/playlist?list=PLeOtMO56HSGE",
+            "https://www.youtube.com/playlist?list=PLKvXOUCHeXgU",
+            "https://www.youtube.com/playlist?list=PLr-nq1_tAgavoRT36nJa4I1DBJpF-tt3K",
             "https://www.youtube.com/playlist?list=PLr-nq1_tAgataBe8sMPCGvZCIlpPlgq4i",
             "https://www.youtube.com/playlist?list=PLr-nq1_tAgasf6lDFzZ34LCXk7WIScTmu",
             "https://www.youtube.com/playlist?list=PLr-nq1_tAgatx2oBmmzTCDbT3fknqYlYU",
-            "https://www.youtube.com/playlist?list=PLr-nq1_tAgas2QA44VzY93Z6GqXpBt_vv",
             "https://www.youtube.com/playlist?list=PLr-nq1_tAgau6jXasIEI9XWgWdn0-NAPx",
+            "https://www.youtube.com/playlist?list=PLr-nq1_tAgas2QA44VzY93Z6GqXpBt_vv",
 
             // Kênh 2
             "https://www.youtube.com/playlist?list=PL038F8U56LOuuPeCx2Yee_qXY9oWD-KNG",
             "https://www.youtube.com/playlist?list=PL038F8U56LOsyRWTAlSywFzqmx8NwYl5g",
-            "https://www.youtube.com/playlist?list=PL038F8U56LOtvUTkMDYTZA7xaCHLHdVky",
           ];
 
           const container = document.getElementById("playlist");
@@ -1649,6 +2028,544 @@
             );
           });
         });
+      </script>
+
+      <!-- PLAYLIST VIDEOS -->
+      <div class="playlist-content s-info view">
+        <div class="header">PLAYLIST VIDEOS</div>
+        <div class="playlist-search">
+          <input
+            id="search"
+            type="text"
+            placeholder="Tìm kiếm playlist..."
+            autocomplete="off"
+          />
+          <div id="playlist-keyword" class="playlist-keyword">
+            <button
+              id="refresh-keywords"
+              class="keyword refresh-keyword"
+              type="button"
+              title="Đổi playlist ngẫu nhiên"
+            >
+              <i class="fa-solid fa-arrows-rotate"></i>
+            </button>
+          </div>
+        </div>
+        <div id="loading" class="playlist-loading" hidden>
+          <i class="fa-solid fa-spinner"></i>
+          Đang tải playlist...
+        </div>
+        <div id="empty-result" class="playlist-empty" hidden>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          Không tìm thấy playlist phù hợp.
+        </div>
+        <div id="playlist-list" class="playlist-list"></div>
+      </div>
+      <script>
+        const playlists = [
+          {
+            title: "Anh Sẽ Chẳng Buồn Đâu",
+            url: "https://www.youtube.com/playlist?list=PLd95b6cb8PlI",
+            count: "1",
+            updated: "46253",
+          },
+
+          {
+            title: "Anh Chỉ Sợ Ngày Mai",
+            url: "https://www.youtube.com/playlist?list=PLKTP51EN5nPo",
+            count: "1",
+            updated: "46255",
+          },
+
+          {
+            title: "Anh Sẽ Về Sớm Thôi",
+            url: "https://www.youtube.com/playlist?list=PLEKEGJMWswNE",
+            count: "1",
+            updated: "46263",
+          },
+
+          {
+            title: "Ai Hay Chữ Ngờ",
+            url: "https://www.youtube.com/playlist?list=PLJYke1IU5OmE",
+            count: "1",
+            updated: "46262",
+          },
+          {
+            title: "Ai Trách Ai Hờn",
+            url: "https://www.youtube.com/playlist?list=PLaajcVfxMShk",
+            count: "1",
+            updated: "46263",
+          },
+
+          {
+            title: "Ba Kiếp Tình Một Kiếp Duyên",
+            url: "https://www.youtube.com/playlist?list=PLDX-2XsYYxF0",
+            count: "1",
+            updated: "46256",
+          },
+
+          {
+            title: "Bắt Con Bướm Vàng",
+            url: "https://www.youtube.com/playlist?list=PLTr6LK9RESFU",
+            count: "1",
+            updated: "46255",
+          },
+
+          {
+            title: "Bình Yên Nhé",
+            url: "https://www.youtube.com/playlist?list=PLfSwYJ0AuHGI",
+            count: "1",
+            updated: "46262",
+          },
+
+          {
+            title: "Chúng Ta Rồi Sẽ Hạnh Phúc",
+            url: "https://www.youtube.com/playlist?list=PLFTz9wUCqEXI",
+            count: "1",
+            updated: "46257",
+          },
+
+          {
+            title: "Còn Anh Em Bỏ Cho Ai",
+            url: "https://www.youtube.com/playlist?list=PLIi4jR8IerUc",
+            count: "1",
+            updated: "46256",
+          },
+          {
+            title: "Chuỗi Ngày Vắng Em",
+            url: "https://www.youtube.com/playlist?list=PLBy1ctqi8fbc",
+            count: "1",
+            updated: "46258",
+          },
+
+          {
+            title: "Con Phố Vắng Em",
+            url: "https://www.youtube.com/playlist?list=PLTxl70rlSo3w",
+            count: "1",
+            updated: "46259",
+          },
+          {
+            title: "Chàng Trai Bất Tử",
+            url: "https://www.youtube.com/playlist?list=PLSom3Wy6OFOA",
+            count: "1",
+            updated: "46253",
+          },
+
+          {
+            title: "Chúng Ta Là Gì",
+            url: "https://www.youtube.com/playlist?list=PLBg3Ns6800Qc",
+            count: "1",
+            updated: "46258",
+          },
+
+          {
+            title: "Điều Anh Không Nên Nghĩ Tới",
+            url: "https://www.youtube.com/playlist?list=PLZKJAgUhh-CY",
+            count: "1",
+            updated: "46258",
+          },
+
+          {
+            title: "Đóa Phù Dung Cuối Cùng",
+            url: "https://www.youtube.com/playlist?list=PLSUdMG6BgwxQ",
+            count: "1",
+            updated: "46256",
+          },
+          {
+            title: "Đừng Ai Nhắc Về Cô Ấy",
+            url: "https://www.youtube.com/playlist?list=PLbA9TNgYTi9A",
+            count: "1",
+            updated: "46256",
+          },
+
+          {
+            title: "Đừng Giữ Trong Lòng",
+            url: "https://www.youtube.com/playlist?list=PLfMcwvfj5JX",
+            count: "1",
+            updated: "46255",
+          },
+          {
+            title: "Đến Sau Một Người",
+            url: "https://www.youtube.com/playlist?list=PLBB-lnphoD84",
+            count: "1",
+            updated: "46262",
+          },
+          {
+            title: "Địa Ngục Trần Gian",
+            url: "https://www.youtube.com/playlist?list=PLAU54c7Wqqvc",
+            count: "1",
+            updated: "46258",
+          },
+
+          {
+            title: "Điều Khác Lạ",
+            url: "https://www.youtube.com/playlist?list=PLWuI1Kjsi7zc",
+            count: "1",
+            updated: "46254",
+          },
+
+          {
+            title: "Dễ Thương",
+            url: "https://www.youtube.com/playlist?list=PLDDLRdI8uRzc",
+            count: "1",
+            updated: "46254",
+          },
+          {
+            title: "Da Key",
+            url: "https://www.youtube.com/playlist?list=PLc9L6CW_FKCQ",
+            count: "1",
+            updated: "46254",
+          },
+
+          {
+            title: "Hy Vọng Quá Hóa Đau Lòng",
+            url: "https://www.youtube.com/playlist?list=PLCFLA6Q3G8PY",
+            count: "1",
+            updated: "46254",
+          },
+          {
+            title: "Họ Nói Thương Em",
+            url: "https://www.youtube.com/playlist?list=PLfbm4wapbrGs",
+            count: "1",
+            updated: "46262",
+          },
+        ];
+        /* ========= DOM ========= */
+        const searchInput = document.getElementById("search");
+        const keywordBar = document.getElementById("playlist-keyword");
+        const container = document.getElementById("playlist-list");
+        const loading = document.getElementById("loading");
+        const empty = document.getElementById("empty-result");
+        const refreshBtn = document.getElementById("refresh-keywords");
+
+        /* ========= CONSTANT ========= */
+        const CACHE_TIME = 24 * 60 * 60 * 1000;
+        const FALLBACK =
+          "https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTVGroup.png";
+        const LOGO =
+          "https://raw.githubusercontent.com/OTVGroup/OTVGroup/main/Avatar%20-%20OTVGroup.png";
+        const ignoreWords = new Set([""]);
+
+        /* ========= HÀM HỖ TRỢ ========= */
+        const normalize = (text) =>
+          String(text || "")
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/đ/g, "d")
+            .replace(/Đ/g, "D")
+            .toLowerCase()
+            .trim();
+        function splitKeywords(text) {
+          return [
+            ...new Set(
+              String(text || "")
+                .replace(/[^\p{L}\p{N}\s]/gu, " ")
+                .split(/\s+/)
+                .filter(Boolean)
+                .filter((w) => w.length > 1)
+                .filter((w) => !ignoreWords.has(w.toLowerCase()))
+                .map(
+                  (w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase(),
+                ),
+            ),
+          ];
+        }
+
+        function shuffle(arr) {
+          const a = [...arr];
+          for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+          }
+          return a;
+        }
+        function escapeHTML(str) {
+          return String(str || "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;");
+        }
+        function getPlaylistId(url) {
+          try {
+            return new URL(url).searchParams.get("list");
+          } catch {
+            return null;
+          }
+        }
+
+        /* ========= CHUẨN HÓA PLAYLIST ========= */
+        playlists.forEach((playlist) => {
+          playlist.keywords = splitKeywords(playlist.title);
+          playlist.normalizedKeywords = playlist.keywords.map(normalize);
+          playlist.normalizedTitle = normalize(playlist.title);
+        });
+
+        /* ========= PLAYLIST NGẪU NHIÊN ========= */
+        function renderRandomKeywords() {
+          keywordBar.innerHTML = "";
+          keywordBar.appendChild(refreshBtn);
+          const randomCount = Math.random() < 0.5 ? 3 : 4;
+          shuffle(playlists)
+            .slice(0, randomCount)
+            .forEach((playlist) => {
+              const chip = document.createElement("button");
+              chip.type = "button";
+              chip.className = "keyword";
+              chip.textContent = playlist.title;
+              chip.onclick = () =>
+                window.open(playlist.url, "_blank", "noopener,noreferrer");
+              keywordBar.appendChild(chip);
+            });
+        }
+        refreshBtn.onclick = renderRandomKeywords;
+
+        /* ========= LẤY THUMBNAIL ========= */
+        async function fetchPlaylistInfo(playlist) {
+          const id = getPlaylistId(playlist.url);
+          const fallbackData = {
+            thumb: FALLBACK,
+            author: "YouTube",
+            count: playlist.count,
+            updated: playlist.updated,
+          };
+          if (!id) return fallbackData;
+          const cacheKey = "playlist_" + id;
+          try {
+            const cached = localStorage.getItem(cacheKey);
+
+            if (cached) {
+              const data = JSON.parse(cached);
+
+              if (data && Date.now() - data.time < CACHE_TIME) {
+                return {
+                  ...fallbackData,
+                  ...data.value,
+                  count: playlist.count,
+                  updated: playlist.updated,
+                };
+              }
+            }
+          } catch {}
+          try {
+            const feed = `https://www.youtube.com/feeds/videos.xml?playlist_id=${encodeURIComponent(id)}`;
+            const proxy = `https://api.allorigins.win/raw?url=${encodeURIComponent(feed)}`;
+            const response = await fetch(proxy, {
+              cache: "no-store",
+            });
+            if (!response.ok) return fallbackData;
+            const xmlText = await response.text();
+            const xml = new DOMParser().parseFromString(xmlText, "text/xml");
+            const entries = [...xml.querySelectorAll("entry")];
+            const author =
+              xml.querySelector("author>name")?.textContent || "YouTube";
+            let thumb = FALLBACK;
+            if (entries.length) {
+              const videoId =
+                entries[0].querySelector("videoId")?.textContent || "";
+              if (videoId) {
+                thumb = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+              }
+            }
+            const value = {
+              thumb,
+              author,
+            };
+            localStorage.setItem(
+              cacheKey,
+              JSON.stringify({
+                time: Date.now(),
+                value,
+              }),
+            );
+            return {
+              ...fallbackData,
+              ...value,
+            };
+          } catch {
+            return fallbackData;
+          }
+        }
+
+        /* ========= TẠO CARD ========= */
+        function createCard(playlist, meta) {
+          const card = document.createElement("article");
+          card.className = "card";
+          card.dataset.title = playlist.normalizedTitle;
+          card.dataset.keywords = playlist.normalizedKeywords.join(",");
+          card.dataset.score = "0";
+          card.innerHTML = `
+                    <div class="thumb">
+                      <img class="bg"
+                          src="${meta.thumb}"
+                          alt="${escapeHTML(playlist.title)}"
+                          loading="lazy">
+                      <div class="cover-wrap">
+                        <div class="vinyl">
+                          <img src="${LOGO}" alt="OTVGroup">
+                        </div>
+                      </div>
+                      <button class="play" type="button">
+                        <i class="fa-solid fa-play"></i>
+                      </button>
+                    </div>
+                    <div class="info">
+                      <div class="title">
+                        ${escapeHTML(playlist.title)}
+                      </div>
+                      <div class="meta">
+                        <div>
+                          <i class="fa-solid fa-list"></i>
+                          ${playlist.count} video
+                        </div>
+                        <div>
+                          <i class="fa-regular fa-calendar"></i>
+                          ${playlist.updated}
+                        </div>
+                      </div>
+                    </div>
+                  `;
+          card.querySelectorAll("img").forEach((img) => {
+            img.onerror = () => (img.src = FALLBACK);
+          });
+          card.onclick = () =>
+            window.open(playlist.url, "_blank", "noopener,noreferrer");
+          card.querySelector(".play").onclick = (e) => {
+            e.stopPropagation();
+            window.open(playlist.url, "_blank", "noopener,noreferrer");
+          };
+          return card;
+        }
+
+        /* ========= RENDER ========= */
+        async function renderCards() {
+          loading.hidden = false;
+          empty.hidden = true;
+          container.innerHTML = "";
+          const batchSize = 5;
+          for (let i = 0; i < playlists.length; i += batchSize) {
+            const batch = playlists.slice(i, i + batchSize);
+            const metas = await Promise.all(batch.map(fetchPlaylistInfo));
+            batch.forEach((playlist, index) => {
+              container.appendChild(createCard(playlist, metas[index]));
+            });
+          }
+          loading.hidden = true;
+          searchPlaylists();
+        }
+
+        /* ========= TÌM KIẾM / HIỂN THỊ ========= */
+
+        function searchPlaylists() {
+          const query = searchInput.value.trim();
+          const words = splitKeywords(query).map(normalize);
+
+          const cards = [...container.querySelectorAll(".card")];
+
+          /* =========================================
+     KHÔNG CÓ PLAYLIST
+     ========================================= */
+
+          if (cards.length === 0) {
+            empty.hidden = false;
+            return;
+          }
+
+          const isSearching = words.length > 0;
+
+          let visible = 0;
+
+          /* =========================================
+     TÍNH ĐIỂM TÌM KIẾM
+     ========================================= */
+
+          cards.forEach((card) => {
+            const title = card.dataset.title || "";
+
+            const keywords = card.dataset.keywords
+              ? card.dataset.keywords.split(",")
+              : [];
+
+            let score = 0;
+
+            words.forEach((word) => {
+              /* Từ khóa xuất hiện trong tiêu đề */
+              if (title.includes(word)) {
+                score += 2;
+              }
+
+              /* Từ khóa trùng chính xác */
+              if (keywords.includes(word)) {
+                score += 3;
+              }
+            });
+
+            card.dataset.score = score;
+          });
+
+          /* =========================================
+     ẨN TẤT CẢ CARD
+     ========================================= */
+
+          cards.forEach((card) => {
+            card.style.display = "none";
+          });
+
+          /* =========================================
+     CÓ TỪ KHÓA
+     → HIỆN TẤT CẢ KẾT QUẢ
+     ========================================= */
+
+          if (isSearching) {
+            const results = cards
+              .filter((card) => Number(card.dataset.score) > 0)
+              .sort(
+                (a, b) => Number(b.dataset.score) - Number(a.dataset.score),
+              );
+
+            results.forEach((card) => {
+              card.style.display = "flex";
+              container.appendChild(card);
+              visible++;
+            });
+
+            /*
+      Có tìm kiếm nhưng không có kết quả
+    */
+            empty.hidden = visible !== 0;
+          } else {
+            /* =========================================
+       KHÔNG CÓ TỪ KHÓA
+       → RANDOM 12 PLAYLIST
+       ========================================= */
+
+            const randomCards = shuffle(cards);
+
+            randomCards.slice(0, 12).forEach((card) => {
+              card.style.display = "flex";
+              container.appendChild(card);
+              visible++;
+            });
+
+            /*
+      Không có từ khóa và có playlist
+      → KHÔNG báo "không có kết quả"
+    */
+            empty.hidden = true;
+          }
+        }
+
+        /* ========= EVENT ========= */
+        searchInput.addEventListener("input", () => {
+          document
+            .querySelectorAll(".keyword")
+            .forEach((chip) => chip.classList.remove("active"));
+          searchPlaylists();
+        });
+
+        /* ========= KHỞI ĐỘNG ========= */
+        renderRandomKeywords();
+        renderCards();
       </script>
 
       <!-- SERVICE-SCROLL -->
