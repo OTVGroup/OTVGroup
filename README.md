@@ -1997,6 +1997,7 @@
         document.addEventListener("DOMContentLoaded", () => {
           const playlists = [
             // Kênh 1
+            "https://www.youtube.com/playlist?list=PLbdK_fC7gibM",
             "https://www.youtube.com/playlist?list=PLeOtMO56HSGE",
             "https://www.youtube.com/playlist?list=PLKvXOUCHeXgU",
             "https://www.youtube.com/playlist?list=PLr-nq1_tAgavoRT36nJa4I1DBJpF-tt3K",
@@ -4460,4 +4461,3 @@
     </script>
   </body>
 </html>
-
