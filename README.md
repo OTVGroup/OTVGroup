@@ -627,8 +627,8 @@
       }
 
       .post .p_1,
-      .post .p_2 {
-        width: calc(100% / 3);
+      .post .p_2,
+      .post .p_3 {
         height: min-content;
         min-width: 300px;
         margin: 0px;
@@ -643,9 +643,21 @@
         flex-direction: column; /* Nếu bạn có nhiều post, vẫn xếp theo dòng */
       }
 
-      .post .p_1 iframe {
+      .post .p_1,
+      .post .p_2 {
+        width: calc(100% / 3);
+      }
+
+      .post .p_3 {
+        flex: 1;
+        margin: 0 auto;
+        max-width: 400px;
+        min-width: 300px;
+      }
+
+      .post .p_3 iframe {
         width: 100%; /* Chiều rộng đầy div */
-        aspect-ratio: 16/9;
+        aspect-ratio: 3/4;
         border: none;
       }
 
@@ -2007,9 +2019,7 @@
             "https://www.youtube.com/playlist?list=PLr-nq1_tAgau6jXasIEI9XWgWdn0-NAPx",
             "https://www.youtube.com/playlist?list=PLr-nq1_tAgas2QA44VzY93Z6GqXpBt_vv",
 
-            // Kênh 2
-            "https://www.youtube.com/playlist?list=PL038F8U56LOuuPeCx2Yee_qXY9oWD-KNG",
-            "https://www.youtube.com/playlist?list=PL038F8U56LOsyRWTAlSywFzqmx8NwYl5g",
+            "https://www.youtube.com/playlist?list=PLWFc__eLia8o&si",
           ];
 
           const container = document.getElementById("playlist");
@@ -2021,7 +2031,7 @@
 
             container.insertAdjacentHTML(
               "beforeend",
-              `<div class="p_1">
+              `<div class="p_3">
                        <iframe
                          src="https://www.youtube.com/embed/videoseries?list=${listId}"
                          allowfullscreen>
