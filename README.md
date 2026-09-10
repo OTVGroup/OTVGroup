@@ -763,7 +763,7 @@
       .playlist-content {
         width: 100%;
         margin: auto;
-        padding: 15px;
+        padding: 0 15px 15px 15px;
         display: flex;
         flex-direction: column;
         background: #000;
@@ -1049,10 +1049,6 @@
       /* ===== TABLET ===== */
 
       @media (max-width: 768px) {
-        .playlist-content {
-          padding: 12px 12px 40px;
-        }
-
         .playlist-list {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
@@ -1065,10 +1061,6 @@
       /* ===== MOBILE ===== */
 
       @media (max-width: 520px) {
-        .playlist-content {
-          padding: 10px 10px 36px;
-        }
-
         .playlist-list {
           grid-template-columns: 1fr;
         }
