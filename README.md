@@ -2001,6 +2001,7 @@
         document.addEventListener("DOMContentLoaded", () => {
           const playlists = [
             // Kênh 1
+            "https://www.youtube.com/playlist?list=PLZvxBWLggOTw",
             "https://www.youtube.com/playlist?list=PLbdK_fC7gibM",
             "https://www.youtube.com/playlist?list=PLeOtMO56HSGE",
             "https://www.youtube.com/playlist?list=PLKvXOUCHeXgU",
@@ -3756,117 +3757,155 @@
         }
 
         /* ========= RENDER ========= */
+        let defaultRandomPlaylists = [];
+        let searchVersion = 0;
+
         async function renderCards() {
           loading.hidden = false;
           empty.hidden = true;
           container.innerHTML = "";
-          const batchSize = 5;
-          for (let i = 0; i < playlists.length; i += batchSize) {
-            const batch = playlists.slice(i, i + batchSize);
-            const metas = await Promise.all(batch.map(fetchPlaylistInfo));
-            batch.forEach((playlist, index) => {
-              container.appendChild(createCard(playlist, metas[index]));
-            });
+
+          // Chọn ngẫu nhiên tối đa 12 playlist, không trùng ID
+          const uniquePlaylists = [];
+          const seen = new Set();
+
+          for (const playlist of shuffle(playlists)) {
+            const id = getPlaylistId(playlist.url) || normalize(playlist.url);
+
+            if (seen.has(id)) continue;
+
+            seen.add(id);
+            uniquePlaylists.push(playlist);
+
+            if (uniquePlaylists.length >= 12) break;
           }
-          loading.hidden = true;
-          searchPlaylists();
+
+          defaultRandomPlaylists = uniquePlaylists;
+
+          await searchPlaylists();
         }
 
         /* ========= TÌM KIẾM / HIỂN THỊ ========= */
-        function searchPlaylists() {
+        async function searchPlaylists() {
+          const requestId = ++searchVersion;
           const query = searchInput.value.trim();
           const words = splitKeywords(query).map(normalize);
-          const cards = [...container.querySelectorAll(".card")];
-          if (cards.length === 0) {
-            empty.hidden = false;
-            return;
-          }
           const isSearching = words.length > 0;
-          /* * ========= TÍNH ĐIỂM ========= * * Mỗi playlist chỉ được tính 1 lần. * Ưu tiên playlist có nhiều key trùng nhất. */ cards.forEach(
-            (card) => {
-              const title = card.dataset.title || "";
-              const keywords = card.dataset.keywords
-                ? card.dataset.keywords.split(",")
-                : [];
-              let score = 0;
-              let matchedKeys = 0;
-              words.forEach((word) => {
-                let matched = false;
-                /* * Key trùng chính xác * => ưu tiên cao nhất */ if (
-                  keywords.includes(word)
-                ) {
-                  score += 3;
-                  matched = true;
-                } /* * Từ khóa xuất hiện trong title */ else if (
-                  title.includes(word)
-                ) {
-                  score += 2;
-                  matched = true;
-                }
-                /* * Đếm số key khác nhau đã trùng */ if (matched) {
-                  matchedKeys++;
-                }
-              });
-              card.dataset.score = score;
-              card.dataset.matchedKeys = matchedKeys;
-            },
-          );
-          /* * ========= ẨN TẤT CẢ ========= */ cards.forEach((card) => {
-            card.style.display = "none";
-          });
-          /* * ========= CÓ TỪ KHÓA ========= */ if (isSearching) {
-            /* * Chống render trùng playlist */ const rendered = new Set();
-            const results = cards
-              .filter((card) => {
-                return Number(card.dataset.matchedKeys) > 0;
+
+          let results = [];
+
+          if (isSearching) {
+            // Tìm trên TOÀN BỘ dữ liệu playlists, không chỉ 12 card
+            results = playlists
+              .map((playlist) => {
+                const title = playlist.normalizedTitle || "";
+                const keywords = playlist.normalizedKeywords || [];
+
+                let score = 0;
+                let matchedKeys = 0;
+
+                words.forEach((word) => {
+                  let matched = false;
+
+                  if (keywords.includes(word)) {
+                    score += 3;
+                    matched = true;
+                  } else if (title.includes(word)) {
+                    score += 2;
+                    matched = true;
+                  }
+
+                  if (matched) matchedKeys++;
+                });
+
+                return { playlist, score, matchedKeys };
               })
-              .sort((a, b) => {
-                /* * 1. Ưu tiên nhiều key trùng hơn */ const keyDiff =
-                  Number(b.dataset.matchedKeys) - Number(a.dataset.matchedKeys);
-                if (keyDiff !== 0) {
-                  return keyDiff;
-                }
-                /* * 2. Nếu số key trùng bằng nhau * thì ưu tiên score cao hơn */ return (
-                  Number(b.dataset.score) - Number(a.dataset.score)
-                );
-              });
-            results.forEach((card) => {
-              /* * playlistId đã được tạo từ URL */ const playlistId =
-                getPlaylistId(card.querySelector(".title")?.textContent) ||
-                card.dataset.title;
-              /* * Nếu card chưa có ID thì dùng * chính title làm khóa tạm. * * Tốt nhất nên bổ sung dataset.playlistId * ở createCard(). */ const uniqueKey =
-                card.dataset.playlistId || playlistId;
-              /* * Đã render rồi => bỏ qua */ if (rendered.has(uniqueKey)) {
-                return;
-              }
-              rendered.add(uniqueKey);
-              card.style.display = "flex";
-            });
-            const visible = results.filter((card) => {
-              return card.style.display === "flex";
-            }).length;
-            empty.hidden = visible !== 0;
+              .filter((item) => item.matchedKeys > 0)
+              .sort(
+                (a, b) => b.score - a.score || b.matchedKeys - a.matchedKeys,
+              )
+              .slice(0, 30);
+          } else {
+            // Ô tìm kiếm trống: dùng 12 playlist đã chọn ngẫu nhiên
+            results = defaultRandomPlaylists.map((playlist) => ({
+              playlist,
+              score: 0,
+              matchedKeys: 0,
+            }));
+          }
+
+          // Chống trùng ID playlist
+          const seen = new Set();
+
+          results = results.filter(({ playlist }) => {
+            const id = getPlaylistId(playlist.url) || normalize(playlist.url);
+
+            if (seen.has(id)) return false;
+
+            seen.add(id);
+            return true;
+          });
+
+          // Bỏ qua kết quả cũ nếu người dùng đã nhập từ khóa mới
+          if (requestId !== searchVersion) return;
+
+          container.innerHTML = "";
+
+          if (results.length === 0) {
+            empty.hidden = false;
+            loading.hidden = true;
             return;
           }
-          /* * ========= KHÔNG CÓ TỪ KHÓA ========= * * Chỉ render tối đa 12 playlist. * Mỗi playlist đúng 1 lần. */ const rendered =
-            new Set();
-          const randomCards = shuffle(cards);
-          let visible = 0;
-          randomCards.forEach((card) => {
-            if (visible >= 12) {
-              return;
-            }
-            const uniqueKey = card.dataset.playlistId || card.dataset.title;
-            if (rendered.has(uniqueKey)) {
-              return;
-            }
-            rendered.add(uniqueKey);
-            card.style.display = "flex";
-            visible++;
-          });
-          empty.hidden = true;
-        }
 
+          empty.hidden = true;
+
+          // Hiển thị card ngay bằng ảnh mặc định, không chờ mạng
+          const cards = results.map(({ playlist, score, matchedKeys }) => {
+            const card = createCard(playlist, {
+              thumb: FALLBACK,
+              count: playlist.count,
+              updated: playlist.updated,
+            });
+
+            card.dataset.score = score;
+            card.dataset.matchedKeys = matchedKeys;
+
+            container.appendChild(card);
+
+            return { playlist, card };
+          });
+
+          loading.hidden = true;
+
+          // Tải thumbnail thật ở nền, tối đa 4 playlist mỗi lượt
+          const batchSize = 4;
+
+          for (let i = 0; i < cards.length; i += batchSize) {
+            if (requestId !== searchVersion) return;
+
+            const batch = cards.slice(i, i + batchSize);
+
+            const metas = await Promise.all(
+              batch.map(async ({ playlist }) => {
+                try {
+                  return await fetchPlaylistInfo(playlist);
+                } catch {
+                  return { thumb: FALLBACK };
+                }
+              }),
+            );
+
+            if (requestId !== searchVersion) return;
+
+            batch.forEach(({ card }, index) => {
+              const img = card.querySelector(".thumb .bg");
+
+              if (img && metas[index]?.thumb) {
+                img.src = metas[index].thumb;
+              }
+            });
+          }
+        }
         /* ========= EVENT ========= */
         searchInput.addEventListener("input", () => {
           document
