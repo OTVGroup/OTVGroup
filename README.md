@@ -1477,24 +1477,129 @@
         <div class="accordion">
           <!-- Cấp 1 -->
           <div class="submenu0">
-            <span>Thương Hiệu</span>
+            <span>Trang Liên Kết</span>
             <!-- Cấp 2 -->
             <div class="submenu1">
-              <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                <span>OTVGroup</span>
-              </a>
-              <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                <span>OTISShop</span>
-              </a>
-              <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                <span>OTISStore</span>
-              </a>
-              <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                <span>OTISStudy</span>
-              </a>
-              <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                <span>OTISFilms</span>
-              </a>
+              <div>
+                <span>Websites</span>
+                <!-- Cấp 3 -->
+                <div class="submenu2">
+                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                    <span>OTVGroup</span>
+                  </a>
+                  <a href="https://otvgroup.github.io/OTISShop" target="_blank">
+                    <span>OTISShop</span>
+                  </a>
+                  <a
+                    href="https://otvgroup.github.io/OTISStore"
+                    target="_blank"
+                  >
+                    <span>OTISStore</span>
+                  </a>
+                  <a
+                    href="https://otvgroup.github.io/OTISStudy"
+                    target="_blank"
+                  >
+                    <span>OTISStudy</span>
+                  </a>
+                  <a
+                    href="https://otvgroup.github.io/OTISFilms"
+                    target="_blank"
+                  >
+                    <span>OTISFilms</span>
+                  </a>
+                </div>
+              </div>
+              <div>
+                <span>Fanpage</span>
+                <!-- Cấp 3 -->
+                <div class="submenu2">
+                  <a href="https://www.facebook.com/OTVContact" target="_blank">
+                    <span>Otis Võ</span>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/OTV.OTISShop"
+                    target="_blank"
+                  >
+                    <span>OTISShop</span>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/OTV.OTISStore"
+                    target="_blank"
+                  >
+                    <span>OTISStore</span>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/OTV.OTISStudy"
+                    target="_blank"
+                  >
+                    <span>OTISStudy</span>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/OTV.OTISFilms"
+                    target="_blank"
+                  >
+                    <span>OTISFilms</span>
+                  </a>
+                </div>
+              </div>
+              <div>
+                <span>Youtube</span>
+                <!-- Cấp 3 -->
+                <div class="submenu2">
+                  <a
+                    href="https://www.youtube.com/@OTVChannelVN"
+                    target="_blank"
+                  >
+                    <span>OTVChannel</span>
+                  </a>
+                  <a href="https://www.youtube.com/@OTVStoryVN" target="_blank">
+                    <span>OTVStory</span>
+                  </a>
+                  <a href="https://www.youtube.com/@OTISShopVN" target="_blank">
+                    <span>OTISShop</span>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/@OTISStoreVN"
+                    target="_blank"
+                  >
+                    <span>OTISStore</span>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/@OTISStudyVN"
+                    target="_blank"
+                  >
+                    <span>OTISStudy</span>
+                  </a>
+                  <a href="#" target="_blank">
+                    <span>OTISFilms</span>
+                  </a>
+                </div>
+              </div>
+              <div>
+                <span>TikTok</span>
+                <!-- Cấp 3 -->
+                <div class="submenu2">
+                  <a href="https://www.tiktok.com/@otvgroupvn" target="_blank">
+                    <span>OTVGroup</span>
+                  </a>
+                  <a href="https://www.tiktok.com/@otisshopvn" target="_blank">
+                    <span>OTISShop</span>
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@otisstore.vn"
+                    target="_blank"
+                  >
+                    <span>OTISStore</span>
+                  </a>
+                  <a href="https://www.tiktok.com/@otisstudyvn" target="_blank">
+                    <span>OTISStudy</span>
+                  </a>
+                  <a href="#" target="_blank">
+                    <span>OTISFilms</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           <!-- Cấp 1 -->
@@ -1522,7 +1627,7 @@
                     <i class="fa-solid fa-video"></i>
                     <span>Sản Xuất Nội Dung</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="https://otvgroup.github.io/OTISShop" target="_blank">
                     <i class="fa-solid fa-link"></i>
                     <span>Tiếp Thị Liên Kết</span>
                   </a>
@@ -1532,11 +1637,14 @@
                 <span>Thương mại</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="https://otvgroup.github.io/OTISShop" target="_blank">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span>Mua Sắm Trực Tuyến</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a
+                    href="https://otvgroup.github.io/OTISStore"
+                    target="_blank"
+                  >
                     <i class="fa-solid fa-handshake"></i>
                     <span>Dịch Vụ Trung Gian</span>
                   </a>
@@ -1546,12 +1654,18 @@
                 <span>Học thuật</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a
+                    href="https://otvgroup.github.io/OTISStudy"
+                    target="_blank"
+                  >
                     <i class="fa-solid fa-book-open"></i>
                     <span>Tư Liệu Nghiên Cứu</span>
                   </a>
 
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a
+                    href="https://otvgroup.github.io/OTISStudy"
+                    target="_blank"
+                  >
                     <i class="fa-solid fa-chart-pie"></i>
                     <span>Báo Cáo & Phân Tích</span>
                   </a>
@@ -1561,11 +1675,17 @@
                 <span>Kỹ thuật</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a
+                    href="https://otvgroup.github.io/OTISStudy"
+                    target="_blank"
+                  >
                     <i class="fa-solid fa-chalkboard-user"></i>
                     <span>Thiết Kế & Phát Triển</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a
+                    href="https://otvgroup.github.io/OTISStudy"
+                    target="_blank"
+                  >
                     <i class="fa-solid fa-gear"></i>
                     <span>Cải Tiến & Ứng Dụng</span>
                   </a>
@@ -1579,98 +1699,16 @@
                     <i class="fa-solid fa-music"></i>
                     <span>Sáng Tác</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a
+                    href="https://otvgroup.github.io/OTISStore"
+                    target="_blank"
+                  >
                     <i class="fa-solid fa-gamepad"></i>
                     <span>Streams</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
+                  <a href="https://otvgroup.github.io/OTISShop" target="_blank">
                     <i class="fa-solid fa-photo-film"></i>
                     <span>Preview</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Cấp 1 -->
-          <div class="submenu0">
-            <span>Liên Kết</span>
-            <!-- Cấp 2 -->
-            <div class="submenu1">
-              <div>
-                <span>Facebook</span>
-                <!-- Cấp 3 -->
-                <div class="submenu2">
-                  <a href="https://www.facebook.com/OtisVo586/" target="_blank">
-                    <span>Otis Võ</span>
-                  </a>
-                  <a
-                    href="https://www.facebook.com/OTV.OTISShop"
-                    target="_blank"
-                  >
-                    <span>OTISShop</span>
-                  </a>
-                  <a
-                    href="https://www.facebook.com/OTV.OTISStore"
-                    target="_blank"
-                  >
-                    <span>OTISStore</span>
-                  </a>
-                  <a
-                    href="https://www.facebook.com/OTV.OTISStudy"
-                    target="_blank"
-                  >
-                    <span>OTISStudy</span>
-                  </a>
-                  <a
-                    href="https://otvgroup.github.io/OTVGroup/#"
-                    target="_blank"
-                  >
-                    <span>OTISFilms</span>
-                  </a>
-                </div>
-              </div>
-              <div>
-                <span>Youtube</span>
-                <!-- Cấp 3 -->
-                <div class="submenu2">
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                    <span>OTVChannel</span>
-                  </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                    <span>OTVStory</span>
-                  </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                    <span>OTISShop</span>
-                  </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                    <span>OTISStore</span>
-                  </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                    <span>OTISStudy</span>
-                  </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                    <span>OTISFilms</span>
-                  </a>
-                </div>
-              </div>
-              <div>
-                <span>TikTok</span>
-                <!-- Cấp 3 -->
-                <div class="submenu2">
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                    <span>OTVGroup</span>
-                  </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                    <span>OTISShop</span>
-                  </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                    <span>OTISStore</span>
-                  </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                    <span>OTISStudy</span>
-                  </a>
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                    <span>OTISFilms</span>
                   </a>
                 </div>
               </div>
@@ -1699,6 +1737,22 @@
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
+          <!-- Cấp 1 -->
+          <div class="submenu0">
+            <span>Khác</span>
+            <!-- Cấp 2 -->
+            <div class="submenu1">
+              <a href="https://forms.gle/DUY8uiVCPKMmPpf5A" target="_blank">
+                <span>Đăng Ký Thành Viên</span>
+              </a>
+              <a href="https://forms.gle/zggvb3Rps66UDgt16" target="_blank">
+                <span>Đề Xuất Phát Triển</span>
+              </a>
+              <a href="https://forms.gle/CKkvurmG9S1dsoZ49" target="_blank">
+                <span>Đánh Giá</span>
+              </a>
             </div>
           </div>
         </div>
