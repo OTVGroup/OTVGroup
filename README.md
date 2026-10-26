@@ -1517,6 +1517,9 @@
                   <a href="https://www.facebook.com/OTVContact" target="_blank">
                     <span>Otis Võ</span>
                   </a>
+                  <a href="https://www.facebook.com/OTVGroup" target="_blank">
+                    <span>OTVGroup</span>
+                  </a>
                   <a
                     href="https://www.facebook.com/OTV.OTISShop"
                     target="_blank"
@@ -1627,10 +1630,6 @@
                     <i class="fa-solid fa-video"></i>
                     <span>Sản Xuất Nội Dung</span>
                   </a>
-                  <a href="https://otvgroup.github.io/OTISShop" target="_blank">
-                    <i class="fa-solid fa-link"></i>
-                    <span>Tiếp Thị Liên Kết</span>
-                  </a>
                 </div>
               </div>
               <div>
@@ -1641,12 +1640,9 @@
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span>Mua Sắm Trực Tuyến</span>
                   </a>
-                  <a
-                    href="https://otvgroup.github.io/OTISStore"
-                    target="_blank"
-                  >
-                    <i class="fa-solid fa-handshake"></i>
-                    <span>Dịch Vụ Trung Gian</span>
+                  <a href="https://otvgroup.github.io/OTISShop" target="_blank">
+                    <i class="fa-solid fa-link"></i>
+                    <span>Tiếp Thị Liên Kết</span>
                   </a>
                 </div>
               </div>
@@ -1658,16 +1654,15 @@
                     href="https://otvgroup.github.io/OTISStudy"
                     target="_blank"
                   >
-                    <i class="fa-solid fa-book-open"></i>
-                    <span>Tư Liệu Nghiên Cứu</span>
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Báo Cáo & Phân Tích</span>
                   </a>
-
                   <a
                     href="https://otvgroup.github.io/OTISStudy"
                     target="_blank"
                   >
-                    <i class="fa-solid fa-chart-pie"></i>
-                    <span>Báo Cáo & Phân Tích</span>
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>Tư Liệu Nghiên Cứu</span>
                   </a>
                 </div>
               </div>
@@ -1695,10 +1690,6 @@
                 <span>Giải trí</span>
                 <!-- Cấp 3 -->
                 <div class="submenu2">
-                  <a href="https://otvgroup.github.io/OTVGroup" target="_blank">
-                    <i class="fa-solid fa-music"></i>
-                    <span>Sáng Tác</span>
-                  </a>
                   <a
                     href="https://otvgroup.github.io/OTISStore"
                     target="_blank"
@@ -3995,12 +3986,10 @@
             "Sản Xuất Nội Dung",
             "Tiếp Thị Liên Kết",
             "Mua Sắm Trực Tuyến",
-            "Dịch Vụ Trung Gian",
-            "Tư Liệu Nghiên Cứu",
             "Báo Cáo & Phân Tích",
+            "Tư Liệu Nghiên Cứu",
             "Thiết Kế & Phát Triển",
             "Cải Tiến & Ứng Dụng",
-            "Sáng Tác",
             "Streams",
             "Preview",
             "Nghiên Cứu Thị Trường",
@@ -4009,24 +3998,20 @@
             "Sản Xuất Nội Dung",
             "Tiếp Thị Liên Kết",
             "Mua Sắm Trực Tuyến",
-            "Dịch Vụ Trung Gian",
-            "Tư Liệu Nghiên Cứu",
             "Báo Cáo & Phân Tích",
+            "Tư Liệu Nghiên Cứu",
             "Thiết Kế & Phát Triển",
             "Cải Tiến & Ứng Dụng",
-            "Sáng Tác",
             "Streams",
             "Preview",
           ], // dòng 1
           [
             "Preview",
             "Streams",
-            "Sáng Tác",
             "Cải Tiến & Ứng Dụng",
             "Thiết Kế & Phát Triển",
             "Báo Cáo & Phân Tích",
             "Tư Liệu Nghiên Cứu",
-            "Dịch Vụ Trung Gian",
             "Mua Sắm Trực Tuyến",
             "Tiếp Thị Liên Kết",
             "Sản Xuất Nội Dung",
@@ -4035,12 +4020,10 @@
             "Nghiên Cứu Thị Trường",
             "Preview",
             "Streams",
-            "Sáng Tác",
             "Cải Tiến & Ứng Dụng",
             "Thiết Kế & Phát Triển",
             "Báo Cáo & Phân Tích",
             "Tư Liệu Nghiên Cứu",
-            "Dịch Vụ Trung Gian",
             "Mua Sắm Trực Tuyến",
             "Tiếp Thị Liên Kết",
             "Sản Xuất Nội Dung",
@@ -4055,12 +4038,10 @@
             "Sản Xuất Nội Dung",
             "Tiếp Thị Liên Kết",
             "Mua Sắm Trực Tuyến",
-            "Dịch Vụ Trung Gian",
-            "Tư Liệu Nghiên Cứu",
             "Báo Cáo & Phân Tích",
+            "Tư Liệu Nghiên Cứu",
             "Thiết Kế & Phát Triển",
             "Cải Tiến & Ứng Dụng",
-            "Sáng Tác",
             "Streams",
             "Preview",
             "Nghiên Cứu Thị Trường",
@@ -4070,11 +4051,10 @@
             "Tiếp Thị Liên Kết",
             "Mua Sắm Trực Tuyến",
             "Dịch Vụ Trung Gian",
-            "Tư Liệu Nghiên Cứu",
             "Báo Cáo & Phân Tích",
+            "Tư Liệu Nghiên Cứu",
             "Thiết Kế & Phát Triển",
             "Cải Tiến & Ứng Dụng",
-            "Sáng Tác",
             "Streams",
             "Preview",
           ], // dòng 3
