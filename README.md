@@ -4893,6 +4893,7 @@
         /* ========= TÌM KIẾM / HIỂN THỊ ========= */
         async function searchPlaylists() {
           const requestId = ++searchVersion;
+
           const query = searchInput.value.trim();
           const words = splitKeywords(query).map(normalize);
           const isSearching = words.length > 0;
@@ -4900,31 +4901,37 @@
           let results = [];
 
           if (isSearching) {
-            // Tìm trên TOÀN BỘ dữ liệu playlists
+            // Tìm kiếm trên toàn bộ danh sách playlist
             results = playlists
               .map((playlist) => {
-                const title = playlist.normalizedTitle || "";
-                const keywords = playlist.normalizedKeywords || [];
+                // Chuẩn hóa tiêu đề, không phân biệt dấu
+                const titleWords = splitKeywords(playlist.title).map(normalize);
 
                 let score = 0;
                 let matchedKeys = 0;
 
-                // So sánh từng từ đơn, sau đó các cụm từ liên tiếp
+                // So sánh từng từ đơn, sau đó từng cụm 2, 3... từ
                 for (let size = 1; size <= words.length; size++) {
                   for (let i = 0; i <= words.length - size; i++) {
-                    const phrase = words.slice(i, i + size).join(" ");
+                    const phrase = words.slice(i, i + size);
 
-                    // Kiểm tra cụm từ có xuất hiện chính xác trong tiêu đề
-                    const escaped = phrase.replace(
-                      /[.*+?^${}()|[\]\\]/g,
-                      "\\$&",
-                    );
+                    // Kiểm tra cụm từ có xuất hiện liên tiếp trong tiêu đề
+                    let matched = false;
 
-                    const matched = new RegExp(
-                      `(^|[^\\p{L}\\p{N}_])${escaped}([^\\p{L}\\p{N}_]|$)`,
-                      "u",
-                    ).test(title);
+                    for (let j = 0; j <= titleWords.length - size; j++) {
+                      const titlePhrase = titleWords.slice(j, j + size);
 
+                      if (
+                        phrase.every(
+                          (word, index) => word === titlePhrase[index],
+                        )
+                      ) {
+                        matched = true;
+                        break;
+                      }
+                    }
+
+                    // Mỗi cụm khớp được cộng 1 điểm
                     if (matched) {
                       score++;
                       matchedKeys++;
@@ -4932,32 +4939,43 @@
                   }
                 }
 
-                return { playlist, score, matchedKeys };
+                return {
+                  playlist,
+                  score,
+                  matchedKeys,
+                };
               })
 
-              // Loại kết quả có điểm bằng 0
+              // Loại playlist có điểm bằng 0
               .filter((item) => item.score > 0)
 
-              // Sắp xếp điểm cao xuống thấp
+              // Sắp xếp điểm từ cao xuống thấp
               .sort(
                 (a, b) => b.score - a.score || b.matchedKeys - a.matchedKeys,
-              )
+              );
 
-              // Chỉ lấy 12 kết quả cao nhất
-              .slice(0, 12);
+            // Loại playlist trùng ID trước khi giới hạn 12 kết quả
+            const seen = new Set();
+
+            results = results.filter(({ playlist }) => {
+              const id = getPlaylistId(playlist.url) || normalize(playlist.url);
+
+              if (seen.has(id)) return false;
+
+              seen.add(id);
+              return true;
+            });
+
+            // Chỉ lấy 12 kết quả có điểm cao nhất
+            results = results.slice(0, 12);
+          } else {
+            // Ô tìm kiếm trống: hiển thị 12 playlist ngẫu nhiên
+            results = defaultRandomPlaylists.map((playlist) => ({
+              playlist,
+              score: 0,
+              matchedKeys: 0,
+            }));
           }
-
-          // Chống trùng ID playlist
-          const seen = new Set();
-
-          results = results.filter(({ playlist }) => {
-            const id = getPlaylistId(playlist.url) || normalize(playlist.url);
-
-            if (seen.has(id)) return false;
-
-            seen.add(id);
-            return true;
-          });
 
           // Bỏ qua kết quả cũ nếu người dùng đã nhập từ khóa mới
           if (requestId !== searchVersion) return;
@@ -4972,7 +4990,7 @@
 
           empty.hidden = true;
 
-          // Hiển thị card ngay bằng ảnh mặc định, không chờ mạng
+          // Hiển thị card ngay bằng ảnh mặc định
           const cards = results.map(({ playlist, score, matchedKeys }) => {
             const card = createCard(playlist, {
               thumb: FALLBACK,
@@ -4990,7 +5008,7 @@
 
           loading.hidden = true;
 
-          // Tải thumbnail thật ở nền, tối đa 4 playlist mỗi lượt
+          // Tải thumbnail nền, tối đa 4 playlist mỗi lượt
           const batchSize = 4;
 
           for (let i = 0; i < cards.length; i += batchSize) {
@@ -5019,6 +5037,7 @@
             });
           }
         }
+
         /* ========= EVENT ========= */
         searchInput.addEventListener("input", () => {
           document
